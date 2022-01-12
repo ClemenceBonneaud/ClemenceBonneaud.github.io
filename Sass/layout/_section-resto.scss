@@ -1,0 +1,134 @@
+/*----------------------------------------*/
+/* SECTION RESTO */
+/*----------------------------------------*/
+
+/*--------------------*/
+/* RESTO - GENERAL */
+
+.resto{
+    padding-top: 50px;
+    background: $background-secondary;
+    padding-bottom: 40px;
+    h2{
+        margin-left:   20px;
+        margin-bottom: 20px;
+    }
+    &__liste{
+        @media screen and (min-width: 426px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+/*--------------------*/
+/* RESTO - CARTES RESTO */
+
+.carte-resto{
+    max-width: 400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    background: $background-primary;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 6px rgb(230 230 230);
+    transform: scale(1);
+    transition: transform 250ms;
+    @media screen and (min-width: 460px) {
+        max-width: 500px;
+        min-width: 210px;
+        width: 40%;
+        height: 300px;
+        margin-left:  5px;
+        margin-right: 5px;
+    }
+    &__image{ /* images des cartes resto */
+        width: 100%;
+        height: 100%;
+    }
+    &__description{ /* Description du resto (nom/localisation) */
+        display: flex;
+        justify-content: space-between;
+        margin-top: -80px;
+        padding-left: 10px;
+        & p{
+            font-size: 17px;
+            margin-top: -10px;
+            font-weight: lighter;
+            @media screen and (min-width: 769px) {
+                font-size: 20px;
+            }
+        }
+        & h3{
+            @media screen and (min-width: 769px) {
+                margin-top: 2px;
+            }
+        }
+    }
+    &__logo{ /* Logo coeur */
+        display: block;
+        position: absolute;
+        margin-top: -50px;
+        margin-left:  85%;
+        margin-right: 20px;
+        font-size: 24px;
+        @media screen and (min-width: 460px) and (max-width: 768px){
+            font-size: 26px;
+            margin-top: -60px;
+        }
+        @media screen and (min-width: 769px) {
+            font-size: 27px;
+            margin-top: -60px;
+        }
+    }
+    &__logo-nouv{ /* Logo coeur pour les cartes ayant l'étiquette 'nouveau' */
+        display: block;
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 85%;
+        margin-right: 20px;
+        @media screen and (min-width: 460px) and (max-width: 768px){
+            font-size: 26px;
+            margin-top: 190px;
+        }
+        @media screen and (min-width: 769px) {
+            font-size: 27px;
+            margin-top: 180px;
+        }
+    }
+    &__nouv{ /* étiquette 'nouveau' */
+        display: block;
+        position: relative;
+        margin-left:  auto;
+        margin-right: 13px;
+        color: #3c8172;
+        background: $colour-tertiary;
+        width: 74px;
+        margin-top: -253px;
+        text-align: center;
+        border-radius: 5px;
+        & p{
+            font-size: 13px;
+            padding-top:    5px;
+            padding-bottom: 5px;
+            @media screen and (min-width: 769px) {
+                font-size: 17px;
+                padding-top:    8px;
+                padding-bottom: 8px;
+            }
+        }
+        @media screen and (min-width: 460px) and (max-width: 768px) {
+            margin-top: -300px;
+        }
+        @media screen and (min-width: 769px) {
+            width: 90px;
+            margin-top: -310px;
+        }
+    }
+    &:hover{
+        transform: scale(1.05);
+    }
+}

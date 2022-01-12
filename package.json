@@ -1,0 +1,24 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClemenceBonneaud/OC_ohmyfood.git"
+  },
+  "keywords": [
+    "ohmyfood",
+    "OC",
+    "P3"
+  ],
+  "author": "Clémence Bonneaud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClemenceBonneaud/OC_ohmyfood/issues"
+  },
+  "homepage": "https://github.com/ClemenceBonneaud/OC_ohmyfood#readme"
+}

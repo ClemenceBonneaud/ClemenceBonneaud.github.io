@@ -1,0 +1,22 @@
+/*-------------------------------------------------------------------------*/
+/*                                 PAGES                                   */
+
+/*----------------------------------------*/
+/* LOADING */
+/*----------------------------------------*/
+
+$size: 3vh;
+
+.load {
+    width: $size*12;
+    height: $size;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    &__bar {
+        background: $colour-primary;
+        height: 100%;
+        width: $size;
+        
+    }
+}

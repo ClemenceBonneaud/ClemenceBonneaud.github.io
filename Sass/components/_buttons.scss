@@ -1,0 +1,52 @@
+/*----------------------------------------*/
+/* BOUTONS */
+/*----------------------------------------*/
+
+.bouton{
+    border: none;
+    border-radius: 50px;
+    background: $gradient-primary;
+    cursor: pointer;
+    transition:  transform 250ms;
+    box-shadow: 2px 5px 6px rgb(209, 209, 209);
+    @media screen and (min-width: 769px) {
+        font-size: 1.3rem;
+    }
+    &:hover{
+        background: $gradient-secondary;
+        box-shadow: 2px 5px 6px rgb(179, 179, 179);
+    }
+}
+
+
+
+
+/*--------------------*/
+/* BOUTONS-PRESENTATION */
+
+.navigation__bouton{
+    margin-top: 20px;
+    padding-top:    15px;
+    padding-bottom: 15px;
+    padding-left:   20px;
+    padding-right:  20px;
+}
+
+
+
+
+/*--------------------*/
+/* BOUTONS-COMMANDER */
+
+.bouton__commander{
+    margin-bottom: 50px;
+    justify-self: center;
+    padding-top:    17px;
+    padding-bottom: 17px;
+    padding-left:   45px;
+    padding-right:  45px;
+    font-size: 16px;
+    @media screen and (min-width: 769px) {
+        font-size: 20px;
+    }
+}

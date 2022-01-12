@@ -1,0 +1,228 @@
+/*-------------------------------------------------------------------------*/
+/*                                 OUTILS                                  */
+
+/*----------------------------------------*/
+/* ANIMATIONS */
+/*----------------------------------------*/
+
+
+
+
+/*--------------------*/
+/* ANIMATIONS - LOADING SPINNER */
+
+$anim-dur: 700ms;
+$anim-delay: $anim-dur / 12;
+
+.load__bar {
+    animation: bars $anim-dur both infinite ease-in-out alternate;
+        @for $i from 1 through 12 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+}
+
+@keyframes bars { /* Mouvement des barres */
+    0% {
+        transform: translate(0px, 0vh);
+        transform: scale(0.3, 0.3);
+        background: $colour-primary;
+    }
+    100% {
+        transform: translate(0px, -3vh);
+        transform: scale(2,2.5);
+        background: $colour-secondary;
+    }
+}
+
+
+.chargement {
+    width: 100%;
+    height: 100vh;
+    background: $background-secondary;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transform: scaleX(0);
+    animation: chargement 3000ms;
+}
+
+@keyframes chargement { /* Apparition et disparition du loading spinner */
+    0% {
+        opacity: 0.9;
+        transform: scaleX(1);
+    }
+    80% {
+        opacity: 0.8;
+    }
+    99% {
+        transform: scaleX(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+}
+
+.page {
+    opacity: 1;
+    animation: apparition 3000ms;
+}
+
+@keyframes apparition { /* Apparition de la page */
+    0% {
+        opacity: 0.1;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/*--------------------*/
+/* ANIMATIONS - COEURS */
+
+.coeur-logo {
+    position: absolute;
+        &--vide {
+            font-size: 25px;
+            margin-top: 26px;
+            opacity: 1;
+            z-index: 1;
+            transition: opacity 1000ms;
+            &:active {
+                opacity: 0;
+            }
+            &:active + .coeur-logo--plein {
+                opacity: 1;
+            }
+            @media screen and (min-width: 769px) {
+                &:hover {
+                    opacity: 0;
+                }
+                &:hover + .coeur-logo--plein {
+                    opacity: 1;
+                }
+            }
+        }
+        &--plein {
+            display: block;
+            font-size: 25px;
+            margin-top: 26px;
+            color: $colour-tertiary;
+            background: $gradient-tertiary;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 1000ms;
+        }
+}
+
+
+
+
+
+/*--------------------*/
+/* ANIMATIONS - APPARITION MENU */
+
+.section-menu__liste {
+    animation: menu 1000ms both;
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: 600ms * $i;
+            }
+        }
+}
+
+@keyframes menu { /* Apparition des entrées, plats et desserts */
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu__liste {
+    animation: plat 500ms both;
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation-delay: 300ms * $i;
+        }
+    }
+}
+
+@keyframes plat { /* Apparition des plats dans les catégories (entree, plat, dessert) */
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+/*--------------------*/
+/* ANIMATIONS - SELECTION PLAT */
+
+.menu {
+    &__choix {
+        transition: transform 500ms;
+    }
+    &__validation-logo {
+        transition: transform 500ms;
+    }
+    &__val-logo {
+        transform: rotate(0turn);
+        transition: transform 500ms;
+    }
+    &__liste:active {
+        & .menu__nom {
+            width: 65%;
+        }
+        & .menu__choix {
+            transform: translate(-50px, 0);
+        }
+        & .menu__val-logo {
+            transform: rotate(-1turn);
+        }
+        & .menu__validation-logo {
+            transform: translate(13px, 0);
+        }
+    }
+    &__liste {
+        @media screen and (min-width: 769px) {
+            &:hover {
+                & .menu__nom {
+                    width: 65%;
+                }
+                & .menu__choix {
+                    transform: translate(-50px, 0);
+                }
+                & .menu__val-logo {
+                    transform: rotate(-1turn);
+                }
+                & .menu__validation-logo {
+                    transform: translate(13px, 0);
+                }
+            }
+        }
+    }
+}
