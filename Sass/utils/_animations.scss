@@ -107,13 +107,11 @@ $anim-delay: $anim-dur / 12;
             &:active + .coeur-logo--plein {
                 opacity: 1;
             }
-            @media screen and (min-width: 769px) {
-                &:hover {
-                    opacity: 0;
-                }
-                &:hover + .coeur-logo--plein {
-                    opacity: 1;
-                }
+            &:hover {
+                opacity: 0;
+            }
+            &:hover + .coeur-logo--plein {
+                opacity: 1;
             }
         }
         &--plein {
@@ -207,22 +205,18 @@ $anim-delay: $anim-dur / 12;
             transform: translate(13px, 0);
         }
     }
-    &__liste {
-        @media screen and (min-width: 769px) {
-            &:hover {
-                & .menu__nom {
-                    width: 65%;
-                }
-                & .menu__choix {
-                    transform: translate(-50px, 0);
-                }
-                & .menu__val-logo {
-                    transform: rotate(-1turn);
-                }
-                & .menu__validation-logo {
-                    transform: translate(13px, 0);
-                }
-            }
+    &__liste:hover {
+        & .menu__nom {
+            width: 65%;
+        }
+        & .menu__choix {
+            transform: translate(-50px, 0);
+        }
+        & .menu__val-logo {
+            transform: rotate(-1turn);
+        }
+        & .menu__validation-logo {
+            transform: translate(13px, 0);
         }
     }
 }
