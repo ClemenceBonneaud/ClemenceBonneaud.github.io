@@ -1,231 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width = device-width, initial-scale=1 ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale=1 " />
 
-		<!-- Fichier CSS -->
-		<link rel="stylesheet" href="public/CSS/style.css">
-		<!-- Fichier CSS Tablette -->
+    <!-- Fichier CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-		<!-- Fichier CSS Téléphone -->
+    <!-- Google font - Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
 
-		<!-- Google font - Shrikhand -->
-		<link rel="preconnect" href="https://fonts.googleapis.com"> 
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-		<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <title>Roudoudou et Galipette</title>
+  </head>
 
-		<!-- Google font - Roboto -->
-		<link rel="preconnect" href="https://fonts.googleapis.com"> 
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-		
-		<!-- FontAwesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <body>
+    <!-- Header -->
+    <header>
+      <figure>
+        <img src="images/RetG.png" alt="Logo Roudoudou et Galipette" />
+      </figure>
+      <nav>
+        <ul class="head_liste">
+          <li class="head_liste__primaire menu-primaire"><a href="index.html">Accueil</a></li>
+          <li class="head_liste__primaire menu-primaire">
+            La M.A.M.
+            <ul class="head_liste__secondaire">
+              <li class="menu-secondaire menu-secondaire--1"><a href="mam.html">Découvrir la MAM</a></li>
+              <li class="menu-secondaire menu-secondaire--2"><a href="journee.html">Une journée avec nous</a></li>
+              <li class="menu-secondaire menu-secondaire--3"><a href="demarches.html">Les démarches</a></li>
+            </ul>
+          </li>
+          <li class="head_liste__primaire menu-primaire">
+            Contact
+            <ul class="head_liste__secondaire">
+              <li class="menu-secondaire menu-secondaire--1"><a href="contact.html">Contact</a></li>
+              <li class="menu-secondaire menu-secondaire--2"><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-		<title>ohmyfood</title>
-	</head>
+    <main>
+      <section class="bienvenue">
+        <h1>Bienvenue chez Roudoudou et Galipette !</h1>
+        <p>
+          La MAM où l'on s'<strong>éveille</strong> et grandit <strong>ensemble</strong> tout en s'<strong>amusant</strong>
+        </p>
+        <div class="bienvenue__mascottes">
+          <figure id="bienvenue-roudoudou-cont">
+            <img
+              id="bienvenue-roudoudou"
+              src="images/Roudoudou-cut-back.png"
+              alt="image de roudoudou le crocodile"
+            />
+          </figure>
+          <figure id="bienvenue-galipette-cont">
+            <img
+              id="bienvenue-galipette"
+              src="images/Galipette-cut.png"
+              alt="image de galipette la girafe"
+            />
+          </figure>
+        </div>
+      </section>
+      <section class="presentation">
+        <h2>Nous sommes trois <strong>Assistantes Maternelles Agrées</strong> réunies
+            pour accueillir vos enfants de <strong>0 à 4 ans</strong> dans un lieu
+            qui leur est <strong>entièrement dédié</strong>
+        </h2>
+        <div class="cartes">
+            <div class="cartes__perso">
+                <figure>
+                    <img src="images/steph.jpg" alt="photo d'Agnès Bonneaud">
+                </figure>
+                <h3>Agnès Bonneaud</h3>
+                <p>Nous sommes trois Assistantes Maternelles Agrées réunies
+                    pour accueillir vos enfants de 0 à 4 ans dans un lieu
+                    qui leur est entièrement dédié.</p>
+            </div>
+            <div class="cartes__perso">
+                <figure>
+                    <img src="images/steph.jpg" alt="photo de Stéphanie Michel">
+                </figure>
+                <h3>Stéphanie Michel</h3>
+                <p>Nous sommes trois Assistantes Maternelles Agrées réunies
+                    pour accueillir vos enfants de 0 à 4 ans dans un lieu
+                    qui leur est entièrement dédié.</p>
+            </div>
+            <div class="cartes__perso">
+                <figure>
+                    <img src="images/steph.jpg" alt="photo de Valérie Bourdon">
+                </figure>
+                <h3>Valérie Bourdon</h3>
+                <p>Nous sommes trois <strong>Assistantes Maternelles Agrées</strong> réunies
+                    pour accueillir vos enfants de 0 à 4 ans dans un lieu
+                    qui leur est entièrement dédié</p>
+            </div>
+        </div>
+      </section>
+      <section class="rejoindre">
+          <h2>Vous souhaitez <strong>faire garder vos enfants</strong> chez Roudoudou et Galipette ?</h2>
+        <div id="liste-points">
+            <a class="point point--left" href="contact.html">
+                <p class="point__num">1</p>
+                <p class="point__txt">Prendre contact</p>
+            </a>
+            <a class="point point--right" href="mam.html">
+                <p class="point__num">2</p>
+                <p class="point__txt">Visiter la MAM</p>
+            </a>
+            <a class="point point--left" href="demarches.html">
+                <p class="point__num">3</p>
+                <p class="point__txt">Signer un engagement réciproque</p>
+            </a>
+            <a class="point point--right" href="demarches.html">
+                <p class="point__num">4</p>
+                <p class="point__txt">Signer un contrat d'embauche</p>
+            </a>
+        </div>
+      </section>
+    </main>
 
-	<body>
-
-		<!-- Bande de chargement -->
-
-		<div class="chargement">
-			<div class="load">
-				<div class="load__bar load__bar--1"></div>
-				<div class="load__bar load__bar--2"></div>
-				<div class="load__bar load__bar--3"></div>
-				<div class="load__bar load__bar--4"></div>
-				<div class="load__bar load__bar--5"></div>
-				<div class="load__bar load__bar--6"></div>
-				<div class="load__bar load__bar--7"></div>
-				<div class="load__bar load__bar--8"></div>
-				<div class="load__bar load__bar--9"></div>
-				<div class="load__bar load__bar--10"></div>
-				<div class="load__bar load__bar--11"></div>
-				<div class="load__bar load__bar--12"></div>
-			</div>
-		</div>
-
-		<div class="page">
-			<header class="page__head">
-
-				<!-- Bandeau "Oh My Food" -->
-				<figure class="head__fig">
-					<img src="public/images/ohmyfood.png" alt="logo-OMF" class="head__img">
-				</figure>
-			</header>
-
-			<main class="page__main">
-
-				<section class="présentation">
-
-					<!-- Bandeau Localisation -->
-
-					<form method="post" action="#" class="localisation">
-						<i class="fas fa-map-marker-alt  localisation__logo"></i>
-						<input type="search" name="formulaire" value="Paris, Belleville"  class="localisation__txt">
-					</form>
-
-					<!-- Navigation interne -->
-
-					<div class="navigation">
-						<h2 class="navigation__titre">Réservez le menu qui <br>vous convient</h2>
-							<p class="navigation__txt">Découvrez des restaurants d'exception, <br>sélectionnés par nos soins.</p>
-						<nav>
-							<button onclick="window.location.href='#restaurants';" name="bouton" class="bouton  navigation__bouton">Explorez nos restaurants</button>
-						</nav>
-					</div>
-				</section>
-			
-				<!-- Fonctionnement -->
-				<section class="fctmt">
-					<h2 class="fctmt__titre">Fonctionnement</h2>
-						<p class="fctmt__num">1</p>
-					<a href="#" class="fctmt__txt">
-						<i class="fas fa-mobile-alt  fctmt__logo  fctmt__logo--tel"></i>
-						<p>Choisissez un restaurant</p>
-					</a>
-						<p class="fctmt__num">2</p>
-					<a href="#" class="fctmt__txt">
-						<i class="fas fa-solid fa-list-ul  fctmt__logo  fctmt__logo--list"></i>
-						<p>Composez votre menu</p>
-					</a>
-						<p class="fctmt__num">3</p>
-					<a href="#" class="fctmt__txt">
-						<i class="fas fa-solid fa-store  fctmt__logo  fctmt__logo--shop"></i>
-						<p>Dégustez au restaurant</p>
-					</a>
-				</section>
-
-				<!-- Restaurants -->
-				<section class="resto" id="restaurants">
-
-					<!-- Titre -->
-					<h2 class="resto__titre">Restaurants</h2>
-
-					<!-- Resto 1 -->
-					<div class="resto__liste">
-						<div class="carte-resto">
-							<a href="page-LPDG.html">
-								<div class="carte-resto__image">
-									<figure class="carte-resto__fig">
-										<img src="public/images/lapalettedugout.jpg" alt="img-LPDG" class="carte-resto__img">
-									</figure>
-								</div>
-								<div class="carte-resto__description">
-									<div>
-										<h3>La palette du goût</h3>
-											<p>Ménilmontant</p>
-									</div>
-								</div>
-								<div class="carte-resto__nouv">
-									<p>Nouveau</p>
-								</div>
-							</a>
-							<div class="icons-heart">
-								<i class="far fa-heart  carte-resto__logo-nouv carte-resto__logo--vide coeur-logo coeur-logo--vide vide"></i>
-								<i class="fas fa-heart  carte-resto__logo-nouv carte-resto__logo--plein coeur-logo coeur-logo--plein plein"></i>
-							</div>
-						</div>
-
-						<!-- Resto 2 -->
-						<div class="carte-resto">
-							<a href="page-LNE.html">
-								<div class="carte-resto__image">
-									<figure class="carte-resto__fig">
-										<img src="public/images/lanoteenchantee.jpg" alt="img-LNE" class="carte-resto__img">
-									</figure>
-								</div>
-								<div class="carte-resto__description">
-									<div>
-										<h3>La note enchantée</h3>
-											<p>Charonne</p>
-									</div>
-								</div>
-								<div class="carte-resto__nouv">
-									<p>Nouveau</p>
-								</div>
-							</a>
-							<div class="icons-heart">
-								<i class="far fa-heart  carte-resto__logo-nouv carte-resto__logo--vide coeur-logo coeur-logo--vide vide"></i>
-								<i class="fas fa-heart  carte-resto__logo-nouv carte-resto__logo--plein coeur-logo coeur-logo--plein plein"></i>
-							</div>
-						</div>
-
-						<!-- Resto 3 -->
-						<div class="carte-resto">
-							<a href="page-ALF.html">
-								<div class="carte-resto__image">
-									<figure class="carte-resto__fig">
-										<img src="public/images/alafrancaise.jpg" alt="img-ALF" class="carte-resto__img">
-									</figure>
-								</div>
-								<div class="carte-resto__description">
-									<div>
-										<h3>À la française</h3>
-											<p>Cité rouge</p>
-									</div>	
-								</div>
-							</a>
-							<div class="icons-heart">
-								<i class="far fa-heart  carte-resto__logo carte-resto__logo--vide coeur-logo coeur-logo--vide vide"></i>
-								<i class="fas fa-heart  carte-resto__logo carte-resto__logo--plein coeur-logo coeur-logo--plein plein"></i>
-							</div>
-						</div>
-
-						<!-- Resto 4 -->
-						<div class="carte-resto">
-							<a href="page-LDDS.html">
-								<div class="carte-resto__image">
-									<figure class="carte-resto__fig">
-										<img src="public/images/ledelicedessens.jpg" alt="img-LDDS" class="carte-resto__img">
-									</figure>
-								</div>
-								<div class="carte-resto__description">
-									<div>
-										<h3>Le délice des sens</h3>
-											<p>Folie-Mélicourt</p>
-									</div>
-								</div>
-							</a>
-							<div class="icons-heart">
-								<i class="far fa-heart  carte-resto__logo carte-resto__logo--vide coeur-logo coeur-logo--vide vide"></i>
-								<i class="fas fa-heart  carte-resto__logo carte-resto__logo--plein coeur-logo coeur-logo--plein plein"></i>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-
-			<!-- Footer -->
-			<footer class="page__foot">
-				<figure class="foot__fig">
-					<img src="public/images/ohmyfood.png" alt="logo-OMF-foot" class="foot__img">
-				</figure>
-				<ul class="foot__liste">
-					<li>
-						<a href="#" class="foot__elt">
-							<i class="fas fa-solid fa-utensils  foot__logo  foot__logo--knife"></i>
-							<p>Proposer un restaurant</p>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="foot__elt">
-							<i class="fas fa-hands-helping  foot__logo  foot__logo--hand"></i>
-							<p>Devenir un partenaire</p>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="foot__link">Mentions légales</a>
-					</li>
-					<li>
-						<a href="mailto:#" class="foot__link">Contact</a>
-					</li>
-				</ul>
-			</footer>
-		</div>
-	</body>
-
+    <footer></footer>
+  </body>
 </html>

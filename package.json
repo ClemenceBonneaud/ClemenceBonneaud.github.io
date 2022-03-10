@@ -1,24 +1,16 @@
 {
-  "name": "code",
+  "name": "site-mam",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:public/CSS/style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ClemenceBonneaud/OC_ohmyfood.git"
+    "sass": "sass --watch ./sass/main.scss:style.css"
   },
   "keywords": [
-    "ohmyfood",
-    "OC",
-    "P3"
+    "M.A.M.",
+    "maison d'assistantes maternelle",
+    "assistante maternelle mogneville"
   ],
   "author": "Clémence Bonneaud",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ClemenceBonneaud/OC_ohmyfood/issues"
-  },
-  "homepage": "https://github.com/ClemenceBonneaud/OC_ohmyfood#readme"
+  "license": "ISC"
 }
