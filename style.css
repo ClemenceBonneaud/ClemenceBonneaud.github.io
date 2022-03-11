@@ -543,13 +543,13 @@ header img {
   font-size: 20px;
   font-weight: 300;
   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media screen and (max-width: 425px) {
   .point__txt {
     font-size: 15px;
     padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
 .point__num {
