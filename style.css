@@ -163,6 +163,14 @@
   box-shadow: 5px 5px 15px -5px #9e9e9e;
 }
 
+/* ---------- Footer ---------- */
+footer a:hover i {
+  color: #f4a640;
+}
+footer a:hover p {
+  color: black;
+}
+
 body {
   margin: 0 auto;
   background-color: rgba(244, 166, 64, 0.3);
@@ -521,6 +529,8 @@ header img {
   margin-bottom: 15px;
   text-decoration: none;
   border-radius: 20px;
+  background-color: rgba(252, 252, 252, 0.1);
+  box-shadow: 2px 2px 10px -5px #9e9e9e;
 }
 @media screen and (max-width: 768px) {
   .point {
@@ -534,6 +544,14 @@ header img {
   font-weight: 300;
   padding-top: 10px;
 }
+@media screen and (max-width: 425px) {
+  .point__txt {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .point__num {
   width: 40px;
   margin-left: auto;
@@ -544,6 +562,44 @@ header img {
   background-color: rgba(244, 166, 64, 0.7);
   border-radius: 50px;
   box-shadow: 2px 2px 10px -3px grey;
+}
+@media screen and (max-width: 425px) {
+  .point__num {
+    width: 20px;
+    padding: 5px 7px;
+    font-size: 20px;
+  }
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  background-color: #fcfcfc;
+  height: auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+footer a {
+  text-decoration: none;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+footer i {
+  color: #49a253;
+  font-size: 40px;
+  margin-right: 15px;
+}
+footer p {
+  color: #444444;
+}
+
+.fa-facebook-square {
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
