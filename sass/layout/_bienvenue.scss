@@ -1,0 +1,49 @@
+/////////////////////////////////////////////////////////////////
+/* -------------------- BANDEAU BIENVENUE -------------------- */
+/////////////////////////////////////////////////////////////////
+
+.bienvenue {
+    height: 350px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    border-radius: 0px 0px -40px -40px;
+    z-index: 100;
+    @media screen and (max-width: 768px) {
+        height: 250px;
+    }
+    & p {
+        color: black;
+        padding-left:  25%;
+        padding-right: 25%;
+        padding-top:   60px;
+        font-size: 1.6rem;
+        @media screen and (max-width: 1024px) {
+            font-size: 1.4rem;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 1.1rem;
+            padding-top: 20px;
+        }
+        @media screen and (max-width: 425px) {
+            font-size: 1.1rem;
+            padding-left:  6%;
+            padding-right: 6%;
+        }
+    }
+}
+
+.fond {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    margin-top: -260px;
+    background-image: url(images/fresque.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+    @media screen and (max-width: 768px) {
+        margin-top: -190px;
+    };
+}

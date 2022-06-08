@@ -1,0 +1,808 @@
+@charset "UTF-8";
+/**
+ * TABLE DES MATIERES
+ *
+ * OUTILS
+ * Variables........................... Variables utiles (couleurs)
+ * Animations.......................... Animations des pages et des éléments
+ *
+ * BASE
+ * Global.............................. Styles de la page
+ * Typographie......................... Styles des titres, paragraphes, liens et boutons
+ *
+ * LAYOUTS
+ * Header.............................. Partie haut de page
+ * Footer.............................. Partie pied de page
+ *
+ * COMPOSANTS
+ * Images ............................. Eléments images
+ * Boutons............................. Eléments boutons
+*/
+/* -------------------- ANIMATIONS -------------------- */
+/* ---------- Header ---------- */
+.menu-primaire {
+  transition: all 500ms;
+}
+.menu-primaire:hover, .menu-primaire:active {
+  color: black;
+  border-top: 2px solid #49a253;
+  cursor: pointer;
+}
+.menu-primaire:hover .head_liste__secondaire, .menu-primaire:active .head_liste__secondaire {
+  display: inline-block;
+  position: relative;
+  top: 25px;
+  right: 34%;
+  padding: 0px;
+}
+@media screen and (max-width: 768px) {
+  .menu-primaire:hover .head_liste__secondaire, .menu-primaire:active .head_liste__secondaire {
+    right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .menu-primaire:hover .head_liste__secondaire, .menu-primaire:active .head_liste__secondaire {
+    position: absolute;
+    top: 70px;
+  }
+}
+
+.menu-secondaire {
+  transition: all 500ms;
+}
+.menu-secondaire:hover, .menu-secondaire:active {
+  background-color: #50b587;
+}
+.menu-secondaire:hover a, .menu-secondaire:active a {
+  color: black;
+}
+
+.menu-secondaire {
+  animation: menu 500ms both;
+}
+.menu-secondaire--1 {
+  animation-delay: 100ms;
+}
+.menu-secondaire--2 {
+  animation-delay: 200ms;
+}
+.menu-secondaire--3 {
+  animation-delay: 300ms;
+}
+.menu-secondaire--4 {
+  animation-delay: 400ms;
+}
+
+@keyframes menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* ---------- Bandeau bienvenue ---------- */
+/* ---------- Bandeau présentation ---------- */
+/* ---------- Bandeau nous rejoindre ---------- */
+.point:hover {
+  transition: all 200ms ease-in-out;
+  transform: scale(1.05);
+  background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 5px 5px 15px -5px #9e9e9e;
+}
+
+/* ---------- Footer ---------- */
+footer a:hover i {
+  color: #f4a640;
+}
+footer a:hover p {
+  color: black;
+}
+
+body {
+  margin: 0 auto;
+  background-color: rgba(244, 166, 64, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+  font-family: "Fredoka", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 0px;
+  padding-top: 70px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 1.4rem;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 50px;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #444444;
+  margin-top: 0;
+  padding-top: 30px;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+h3 {
+  font-size: 1.2 rem;
+  color: #444444;
+}
+
+p {
+  color: black;
+  font-size: 1rem;
+}
+
+.bloc {
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px 0px #d8d8d8;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 73px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 15px -10px #9e9e9e;
+}
+header figure {
+  width: 80px;
+  margin-right: 0;
+  margin-top: 12px;
+}
+@media screen and (max-width: 768px) {
+  header figure {
+    display: none;
+  }
+}
+header img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+}
+
+.head_liste {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  margin-top: 0px;
+  margin-right: 2px;
+}
+@media screen and (max-width: 768px) {
+  .head_liste {
+    padding: 0;
+    width: 100%;
+    justify-content: stretch;
+  }
+}
+.head_liste__primaire {
+  width: 150px;
+  text-align: center;
+  color: #525252;
+  text-decoration: none;
+  border-top: 2px solid #fcfcfc;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+@media screen and (max-width: 768px) {
+  .head_liste__primaire {
+    width: 100%;
+  }
+}
+.head_liste__primaire a {
+  color: #525252;
+  text-decoration: none;
+}
+.head_liste__secondaire {
+  display: none;
+  text-align: right;
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .head_liste__secondaire {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .head_liste__secondaire {
+    width: 100%;
+  }
+}
+.head_liste__secondaire a {
+  display: inline-block;
+}
+
+.menu-secondaire {
+  background-color: #c7e3cb;
+  border-top: 2px solid #fcfcfc;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 14px;
+}
+@media screen and (max-width: 425px) {
+  .menu-secondaire {
+    width: 100%;
+  }
+}
+
+.menu-secondaire a {
+  padding: 20px 25px;
+  width: 150px;
+}
+@media screen and (max-width: 425px) {
+  .menu-secondaire a {
+    width: fit-content;
+  }
+}
+
+/* -------------------- BANDEAU BIENVENUE -------------------- */
+.bienvenue {
+  height: 350px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+  border-radius: 0px 0px -40px -40px;
+  z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .bienvenue {
+    height: 250px;
+  }
+}
+.bienvenue p {
+  color: black;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 60px;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 1024px) {
+  .bienvenue p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bienvenue p {
+    font-size: 1.1rem;
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .bienvenue p {
+    font-size: 1.1rem;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+.fond {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  margin-top: -260px;
+  background-image: url(images/fresque.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .fond {
+    margin-top: -190px;
+  }
+}
+
+/* -------------------- BANDEAU PRESENTATION -------------------- */
+.presentation {
+  height: auto;
+  background-color: #fcfcfc;
+  margin-top: 0;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 0px 0px 15px -5px #9e9e9e;
+}
+
+.cartes {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .cartes {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.cartes__perso {
+  text-align: center;
+  width: 28%;
+  padding-bottom: 40px;
+  background-color: rgba(73, 162, 83, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .cartes__perso {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cartes__perso {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+.cartes__perso figure {
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cartes__perso img {
+  width: 150px;
+  border-radius: 10px;
+}
+.cartes__perso p {
+  font-weight: lighter;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bienvenue-galipette {
+  position: absolute;
+  width: 100px;
+  right: 30px;
+  margin-top: -80px;
+  transform: rotate(-40deg);
+}
+@media screen and (max-width: 768px) {
+  #bienvenue-galipette {
+    right: 20px;
+    margin-top: -30px;
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 425px) {
+  #bienvenue-galipette {
+    width: 70px;
+    right: 30px;
+    margin-top: -50px;
+    transform: rotate(20deg);
+  }
+}
+
+/* -------------------- BANDEAU REJOINDRE -------------------- */
+.rejoindre {
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  justify-content: center;
+}
+
+#liste-points {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media screen and (max-width: 768px) {
+  #liste-points {
+    flex-direction: column;
+  }
+}
+
+.point {
+  width: 15%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: rgba(252, 252, 252, 0.1);
+  box-shadow: 2px 2px 10px -5px #9e9e9e;
+}
+@media screen and (max-width: 1024px) {
+  .point {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .point {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.point__txt {
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 425px) {
+  .point__txt {
+    font-size: 15px;
+    padding-top: 5px;
+  }
+}
+.point__num {
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: lighter;
+  padding: 10px 7px;
+  background-color: rgba(244, 166, 64, 0.7);
+  border-radius: 50px;
+  box-shadow: 2px 2px 10px -3px grey;
+}
+@media screen and (max-width: 425px) {
+  .point__num {
+    width: 20px;
+    padding: 5px 7px;
+    font-size: 20px;
+  }
+}
+
+#bienvenue-roudoudou {
+  position: absolute;
+  width: 100px;
+  left: 40px;
+  margin-top: -80px;
+}
+@media screen and (max-width: 768px) {
+  #bienvenue-roudoudou {
+    left: 20px;
+    width: 90px;
+    margin-top: -60px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #bienvenue-roudoudou {
+    left: 20px;
+    width: 75px;
+    margin-top: -40px;
+  }
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  background-color: #fcfcfc;
+  height: auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-shadow: 0px 0px 15px -10px #9e9e9e;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
+footer a {
+  text-decoration: none;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+footer i {
+  color: #49a253;
+  font-size: 40px;
+  margin-right: 15px;
+}
+footer p {
+  color: #444444;
+}
+
+.fa-facebook-square {
+  font-size: 50px;
+}
+
+/* ----------------------- PAGE DEMARCHES ----------------------- */
+#demarches {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.etape {
+  background-color: #fcfcfc;
+  display: flex;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .etape {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.etape .point__num--demarches {
+  height: 40px;
+  min-width: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+  .etape .point__num--demarches {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .etape .point__num--demarches {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 12px;
+    height: 33px;
+  }
+}
+.etape--texte {
+  text-align: left;
+  margin-right: 20px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .etape--texte {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.etape a {
+  color: #49a253;
+}
+.etape a:hover {
+  color: #f4a640;
+  cursor: pointer;
+}
+.etape figure {
+  width: 20%;
+  max-height: 100%;
+  height: auto;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .etape figure {
+    display: none;
+  }
+}
+.etape img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px 40px 40px 0px;
+}
+
+/* ----------------------- PAGE UNE JOURNEE A LA MAM ----------------------- */
+#journee {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#journee h1 {
+  margin-bottom: 60px;
+}
+#journee__contenu {
+  text-align: left;
+}
+#journee h2 {
+  margin-top: 60px;
+  margin-bottom: -30px;
+  border-left: 8px dotted #49a253;
+  border-top: 8px dotted #49a253;
+  border-radius: 100px 0px 0px 0px;
+}
+#journee h3 {
+  margin-top: 40px;
+}
+#journee p, #journee li {
+  margin-left: 30px;
+}
+#journee :last-child {
+  margin-bottom: 60px;
+}
+#journee figure {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  margin-bottom: -60px;
+}
+#journee img {
+  width: 25%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* -------------------------------- PAGE MAM ------------------------------- */
+#mam {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mam h1 {
+  margin-bottom: 60px;
+}
+#mam .bloc {
+  background-color: #fcfcfc;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  #mam .bloc {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #mam .bloc {
+    margin-bottom: 40px;
+  }
+}
+#mam .texte {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mam figure {
+  height: 100px;
+  position: absolute;
+  margin-top: -110px;
+  margin-left: -2%;
+}
+@media screen and (max-width: 768px) {
+  #mam figure {
+    right: 0%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #mam figure {
+    height: 70px;
+    margin-top: -70px;
+  }
+}
+#mam img {
+  height: 100%;
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  #mam #mam-r {
+    margin-top: -180px;
+  }
+  #mam #mam-g {
+    margin-top: -230px;
+  }
+}
+
+/* -------------------------------- PAGE FAQ ------------------------------- */
+#faq {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#faq .bloc {
+  background-color: #fcfcfc;
+  margin-bottom: 60px;
+}
+#faq .texte {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#faq .texte p {
+  margin-left: 20px;
+}
+#faq a {
+  color: #49a253;
+  text-decoration: none;
+}
+#faq a:hover {
+  color: #f4a640;
+}
+#faq h2 {
+  border-bottom: 8px dotted #49a253;
+  border-left: 8px dotted #49a253;
+  border-radius: 50px 0px 0px 100px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+#faq h3 {
+  margin-top: 60px;
+}
+#faq figure {
+  height: 100px;
+  position: absolute;
+  z-index: 0;
+  margin-top: -130px;
+  right: 10%;
+}
+@media screen and (max-width: 425px) {
+  #faq figure {
+    right: 5%;
+    height: 80px;
+    margin-top: -110px;
+  }
+}
+#faq img {
+  height: 100%;
+}
+
+/* ------------------------------ PAGE CONTACT ----------------------------- */
+#contact .bloc {
+  background-color: #fcfcfc;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+#contact p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#contact a {
+  text-decoration: none;
+  color: #49a253;
+}
+#contact a:hover {
+  color: #f4a640;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+    font-family: 'Fredoka', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0px;
+    padding-top: 70px;
+    font-weight: 500;
+    @media screen and (max-width: 1024px) {
+        font-size: 1.8rem;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 1.3rem;
+    }
+    @media screen and (max-width: 425px) {
+        font-size: 1.4rem;
+        padding-left:  13%;
+        padding-right: 13%;
+        padding-top:   50px; 
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: rgb(68, 68, 68);
+    margin-top: 0;
+    padding-top:    30px;
+    padding-right:  10%;
+    padding-left:   10%;
+    padding-bottom: 50px;
+    @media screen and (max-width: 425px) {
+        font-size: 1.2rem;
+    }
+}
+
+h3 {
+    font-size: 1.2 rem;
+    color: rgb(68, 68, 68);
+}
+
+p {
+    color: black;
+    font-size: 1rem;
+}
