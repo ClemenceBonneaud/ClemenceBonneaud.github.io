@@ -69,6 +69,9 @@
 .menu-secondaire--3 {
   animation-delay: 300ms;
 }
+.menu-secondaire--4 {
+  animation-delay: 400ms;
+}
 
 @keyframes menu {
   0% {
@@ -81,80 +84,7 @@
   }
 }
 /* ---------- Bandeau bienvenue ---------- */
-@keyframes tourne {
-  0% {
-    transform: rotate(0turn);
-  }
-  50% {
-    transform: rotate(-2turn);
-  }
-  100% {
-    transform: rotate(0turn);
-  }
-}
-@keyframes avance {
-  0% {
-    transform: translateX(200px);
-  }
-  50% {
-    transform: translateX(-500px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-@keyframes penche {
-  0% {
-    transform: rotate(0);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(0);
-  }
-}
-@keyframes bouge {
-  0% {
-    transform: translateX(-200px);
-  }
-  25% {
-    transform: translateX(-150px);
-  }
-  50% {
-    transform: translateX(-200px);
-  }
-  80% {
-    transform: translateX(0px);
-    transform: translateY(0px);
-  }
-  90% {
-    transform: translateY(-90px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@media screen and (min-width: 769px) {
-  /* Galipette */
-  #bienvenue-galipette-cont {
-    animation: avance 7000ms both ease-in-out alternate;
-  }
-
-  #bienvenue-galipette {
-    animation: tourne 7000ms both ease-in-out alternate;
-  }
-
-  /* Roudoudou */
-  #bienvenue-roudoudou-cont {
-    animation: bouge 7000ms both ease-in-out alternate;
-  }
-
-  #bienvenue-roudoudou {
-    animation: penche 7000ms both ease-in-out alternate;
-    transform-origin: bottom left;
-  }
-}
+/* ---------- Bandeau présentation ---------- */
 /* ---------- Bandeau nous rejoindre ---------- */
 .point:hover {
   transition: all 200ms ease-in-out;
@@ -188,9 +118,9 @@ li {
 
 h1 {
   font-size: 2rem;
-  color: #444444;
   margin-top: 0px;
   padding-top: 70px;
+  font-weight: 500;
 }
 @media screen and (max-width: 1024px) {
   h1 {
@@ -216,7 +146,7 @@ h2 {
   font-weight: lighter;
   color: #444444;
   margin-top: 0;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-right: 10%;
   padding-left: 10%;
   padding-bottom: 50px;
@@ -235,6 +165,16 @@ h3 {
 p {
   color: black;
   font-size: 1rem;
+}
+
+.bloc {
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px 0px #d8d8d8;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 /* -------------------- HEADER -------------------- */
@@ -302,6 +242,7 @@ header img {
 .head_liste__secondaire {
   display: none;
   text-align: right;
+  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .head_liste__secondaire {
@@ -344,13 +285,18 @@ header img {
 .bienvenue {
   height: 350px;
   width: 100%;
-  background-size: contain;
   text-align: center;
   margin-bottom: 0;
   border-radius: 0px 0px -40px -40px;
+  z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .bienvenue {
+    height: 250px;
+  }
 }
 .bienvenue p {
-  color: #505050;
+  color: black;
   padding-left: 25%;
   padding-right: 25%;
   padding-top: 60px;
@@ -374,67 +320,21 @@ header img {
     padding-right: 6%;
   }
 }
-.bienvenue__mascottes {
-  display: flex;
-  justify-content: space-between;
-}
-.bienvenue figure {
-  width: 150px;
-}
-@media screen and (max-width: 1024px) {
-  .bienvenue figure {
-    width: 120px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .bienvenue figure {
-    width: 100px;
-  }
-}
-@media screen and (max-width: 425px) {
-  .bienvenue figure {
-    width: 85px;
-  }
-}
-.bienvenue img {
-  width: 100%;
-}
 
-#bienvenue-roudoudou {
-  margin-top: -180px;
-}
-@media screen and (max-width: 1024px) {
-  #bienvenue-roudoudou {
-    margin-top: -150px;
-  }
-}
-@media screen and (max-width: 768px) {
-  #bienvenue-roudoudou {
-    margin-top: -40px;
-  }
-}
-@media screen and (max-width: 425px) {
-  #bienvenue-roudoudou {
-    margin-top: -20px;
-  }
-}
-
-#bienvenue-galipette {
-  margin-top: -120px;
-}
-@media screen and (max-width: 1024px) {
-  #bienvenue-galipette {
-    margin-top: -100px;
-  }
+.fond {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  margin-top: -260px;
+  background-image: url(images/fresque.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
 }
 @media screen and (max-width: 768px) {
-  #bienvenue-galipette {
-    margin-top: 0px;
-  }
-}
-@media screen and (max-width: 425px) {
-  #bienvenue-galipette {
-    margin-top: 10px;
+  .fond {
+    margin-top: -190px;
   }
 }
 
@@ -466,8 +366,6 @@ header img {
   width: 28%;
   padding-bottom: 40px;
   background-color: rgba(73, 162, 83, 0.2);
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px 0px #d8d8d8;
 }
 @media screen and (max-width: 768px) {
   .cartes__perso {
@@ -499,6 +397,29 @@ header img {
   font-weight: lighter;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+#bienvenue-galipette {
+  position: absolute;
+  width: 100px;
+  right: 30px;
+  margin-top: -80px;
+  transform: rotate(-40deg);
+}
+@media screen and (max-width: 768px) {
+  #bienvenue-galipette {
+    right: 20px;
+    margin-top: -30px;
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 425px) {
+  #bienvenue-galipette {
+    width: 70px;
+    right: 30px;
+    margin-top: -50px;
+    transform: rotate(20deg);
+  }
 }
 
 /* -------------------- BANDEAU REJOINDRE -------------------- */
@@ -576,6 +497,27 @@ header img {
   }
 }
 
+#bienvenue-roudoudou {
+  position: absolute;
+  width: 100px;
+  left: 40px;
+  margin-top: -80px;
+}
+@media screen and (max-width: 768px) {
+  #bienvenue-roudoudou {
+    left: 20px;
+    width: 90px;
+    margin-top: -60px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #bienvenue-roudoudou {
+    left: 20px;
+    width: 75px;
+    margin-top: -40px;
+  }
+}
+
 /* -------------------- FOOTER -------------------- */
 footer {
   background-color: #fcfcfc;
@@ -611,6 +553,256 @@ footer p {
 
 .fa-facebook-square {
   font-size: 50px;
+}
+
+/* ----------------------- PAGE DEMARCHES ----------------------- */
+#demarches {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.etape {
+  background-color: #fcfcfc;
+  display: flex;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .etape {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.etape .point__num--demarches {
+  height: 40px;
+  min-width: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+  .etape .point__num--demarches {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .etape .point__num--demarches {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 12px;
+    height: 33px;
+  }
+}
+.etape--texte {
+  text-align: left;
+  margin-right: 20px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .etape--texte {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.etape a {
+  color: #49a253;
+}
+.etape a:hover {
+  color: #f4a640;
+  cursor: pointer;
+}
+.etape figure {
+  width: 20%;
+  max-height: 100%;
+  height: auto;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .etape figure {
+    display: none;
+  }
+}
+.etape img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px 40px 40px 0px;
+}
+
+/* ----------------------- PAGE UNE JOURNEE A LA MAM ----------------------- */
+#journee {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#journee h1 {
+  margin-bottom: 60px;
+}
+#journee__contenu {
+  text-align: left;
+}
+#journee h2 {
+  margin-top: 60px;
+  margin-bottom: -30px;
+  border-left: 8px dotted #49a253;
+  border-top: 8px dotted #49a253;
+  border-radius: 100px 0px 0px 0px;
+}
+#journee h3 {
+  margin-top: 40px;
+}
+#journee p, #journee li {
+  margin-left: 30px;
+}
+#journee :last-child {
+  margin-bottom: 60px;
+}
+#journee figure {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  margin-bottom: -60px;
+}
+#journee img {
+  width: 25%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* -------------------------------- PAGE MAM ------------------------------- */
+#mam {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mam h1 {
+  margin-bottom: 60px;
+}
+#mam .bloc {
+  background-color: #fcfcfc;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  #mam .bloc {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #mam .bloc {
+    margin-bottom: 40px;
+  }
+}
+#mam .texte {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mam figure {
+  height: 100px;
+  position: absolute;
+  margin-top: -110px;
+  margin-left: -2%;
+}
+@media screen and (max-width: 768px) {
+  #mam figure {
+    right: 0%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #mam figure {
+    height: 70px;
+    margin-top: -70px;
+  }
+}
+#mam img {
+  height: 100%;
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  #mam #mam-r {
+    margin-top: -180px;
+  }
+  #mam #mam-g {
+    margin-top: -230px;
+  }
+}
+
+/* -------------------------------- PAGE FAQ ------------------------------- */
+#faq {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#faq .bloc {
+  background-color: #fcfcfc;
+  margin-bottom: 60px;
+}
+#faq .texte {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#faq .texte p {
+  margin-left: 20px;
+}
+#faq a {
+  color: #49a253;
+  text-decoration: none;
+}
+#faq a:hover {
+  color: #f4a640;
+}
+#faq h2 {
+  border-bottom: 8px dotted #49a253;
+  border-left: 8px dotted #49a253;
+  border-radius: 50px 0px 0px 100px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+#faq h3 {
+  margin-top: 60px;
+}
+#faq figure {
+  height: 100px;
+  position: absolute;
+  z-index: 0;
+  margin-top: -130px;
+  right: 10%;
+}
+@media screen and (max-width: 425px) {
+  #faq figure {
+    right: 5%;
+    height: 80px;
+    margin-top: -110px;
+  }
+}
+#faq img {
+  height: 100%;
+}
+
+/* ------------------------------ PAGE CONTACT ----------------------------- */
+#contact .bloc {
+  background-color: #fcfcfc;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+#contact p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#contact a {
+  text-decoration: none;
+  color: #49a253;
+}
+#contact a:hover {
+  color: #f4a640;
 }
 
 /*# sourceMappingURL=style.css.map */
