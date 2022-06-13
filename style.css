@@ -95,49 +95,6 @@
   box-shadow: 5px 5px 15px -5px #9e9e9e;
 }
 
-/* ---------- Carousel Page MAM ---------- */
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
 /* ---------- Footer ---------- */
 footer a:hover i {
   color: #f4a640;
@@ -344,7 +301,6 @@ header img {
   width: 100%;
   text-align: center;
   margin-bottom: 0;
-  border-radius: 0px 0px -40px -40px;
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
@@ -658,7 +614,7 @@ header img {
   height: 350px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
@@ -678,7 +634,8 @@ header img {
 }
 .carousel__viewport {
   /* Ensemble des éléments de la liste */
-  position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -707,7 +664,6 @@ header img {
   margin: 0;
 }
 .carousel__snapper {
-  /* Liens précédent/suivant */
   position: absolute;
   top: 0;
   left: 0;
@@ -717,10 +673,6 @@ header img {
 }
 .carousel__navigation {
   /* Ensemble des boutons de navigation */
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
   text-align: center;
 }
 .carousel__navigation-button {
@@ -728,7 +680,7 @@ header img {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #fbd94f;
+  background-color: #49a253;
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -774,28 +726,6 @@ header img {
   }
 }
 
-@media (hover: hover) {
-  .carousel__snapper {
-    animation-name: tonext, snap;
-    animation-timing-function: ease;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-  }
-
-  .carousel__slide:last-child .carousel__snapper {
-    animation-name: tostart, snap;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
-    animation-name: none;
-  }
-}
-.carousel:hover .carousel__snapper,
-.carousel:focus-within .carousel__snapper {
-  animation-name: none;
-}
-
 .carousel__navigation-list,
 .carousel__navigation-item {
   display: inline-block;
@@ -811,7 +741,6 @@ header img {
   width: 4rem;
   height: 4rem;
   transform: translateY(-50%);
-  border-radius: 50%;
   font-size: 0;
 }
 @media screen and (max-width: 768px) {
