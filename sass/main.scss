@@ -11,11 +11,15 @@
  *
  * LAYOUTS
  * Header.............................. Partie haut de page
+ * Bienvenue........................... Page d'accueil - bandeau bienvenue
+ * Présentation........................ Page d'accueil - section présentation des ass mat
+ * Rejoindre........................... Page d'accueil - section comment inscrire votre enfant
+ * MAM................................. Page découvrir la MAM
+ * Journée............................. Page une journée à la MAM
+ * Démarches........................... Page inscrire votre enfant
+ * FAQ................................. Page FAQ
+ * Contact............................. Page contact
  * Footer.............................. Partie pied de page
- *
- * COMPOSANTS
- * Images ............................. Eléments images
- * Boutons............................. Eléments boutons
 */
 
 
@@ -27,16 +31,13 @@
 @import "utiles/animations";
 @import "base/global";
 @import "base/typography";
-@import "layout/general";
 @import "layout/header";
 @import "layout/bienvenue";
 @import "layout/presentation";
 @import "layout/rejoindre";
-@import "layout/footer";
-@import "layout/demarches";
-@import "layout/journee";
 @import "layout/mam";
+@import "layout/journee";
+@import "layout/demarches";
 @import "layout/faq";
 @import "layout/contact";
-@import "components/images";
-@import "components/buttons";
+@import "layout/footer";

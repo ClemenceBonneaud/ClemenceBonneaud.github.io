@@ -2,15 +2,15 @@
 /* -------------------------------- PAGE FAQ ------------------------------- */
 ///////////////////////////////////////////////////////////////////////////////
 
-#faq {
+#faq { /* Page complete */
     width: 90%;
     margin-left:  auto;
     margin-right: auto;
-    & .bloc {
+    & .bloc { /* Blocs */
         background-color: $color_quaternary;
         margin-bottom: 60px;
     }
-    & .texte {
+    & .texte { /* Contenu texte des blocs */
         width: 90%;
         margin-left:  auto;
         margin-right: auto;

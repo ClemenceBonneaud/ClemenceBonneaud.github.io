@@ -7,10 +7,10 @@
     <!-- Fichier CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Google font - Fredoka -->
+    <!-- Google font - Monserrat  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
 
     <!-- FontAwesome -->
     <link
@@ -25,28 +25,29 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico" />
 
     <title>Une journée chez R&G</title>
+
   </head>
 
   <body>
     <!-- Header -->
     <header>
-      <figure>
+      <figure> <!-- Logo R&G -->
         <a href="index.html">
             <img src="images/RetG.png" alt="Logo Roudoudou et Galipette" />
         </a>
       </figure>
-      <nav>
+      <nav> <!-- Menu -->
         <ul class="head_liste">
-          <li class="head_liste__primaire menu-primaire"><a href="index.html">Accueil</a></li>
-          <li class="head_liste__primaire menu-primaire">
+          <li class="head_liste__primaire menu-primaire"><a href="index.html" class="lien-primaire">Accueil</a></li>
+          <li class="head_liste__primaire menu-primaire" id="non-lien-primaire">
             La M.A.M.
-            <ul class="head_liste__secondaire">
+            <ul class="head_liste__secondaire"> <!-- Menu déroulant -->
               <li class="menu-secondaire menu-secondaire--1"><a href="mam.html">Découvrir la MAM</a></li>
               <li class="menu-secondaire menu-secondaire--2"><a href="journee.html">Une journée avec nous</a></li>
               <li class="menu-secondaire menu-secondaire--3"><a href="demarches.html">Inscrire votre enfant</a></li>
               <li class="menu-secondaire menu-secondaire--4"><a href="faq.html">FAQ</a></li>
             </ul>
-          <li class="head_liste__primaire menu-primaire"><a href="contact.html">Contact</a></li>
+          <li class="head_liste__primaire menu-primaire"><a href="contact.html" class="lien-primaire">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -57,17 +58,16 @@
         <h1>Suivez-nous à travers une journée type à la MAM</h1>
 
         <div id="journee__contenu">
-          <div>
+          <figure class="bloc bloc--image"> <!-- Bandeau d'images -->
+            <img src="./images/photo-enfant-J.1.jpg" alt="image d'activité" />
+            <img src="./images/photo-enfant-J.2.jpg" alt="image d'activité" id="photo-2"/>
+            <img src="./images/photo-enfant-J.3.jpg" alt="image d'activité" id="photo-3"/>
+            <img src="./images/photo-enfant-J.4.jpg" alt="image d'activité" />
+          </figure>
+
+          <div class="journee__contenu--droite" id="journee1">
+            <h2>La journée commence par ...</h2> <!-- Section début de matinée -->
             
-            <figure>
-              <img src="./images/1653395531074.jpg" alt="image d'activité" />
-              <img src="./images/1653395531081.jpg" alt="image d'activité" />
-              <img src="./images/1653395531096.jpg" alt="image d'activité" />
-              <img src="./images/1653395531131.jpg" alt="image d'activité" />
-            </figure>
-
-            <h2>La journée commence par ...</h2>
-
               <h3>Un accueil individualisé</h3>
                 <p>C'est un moment privilégié d'échange avec les parents sur des points particuliers comme :</p>
                 <ul>
@@ -88,8 +88,16 @@
 
               <h3>Des jeux libres et de la motricité</h3>
 
+              <figure class="journee__logo">
+                <img src="./images/Galipette-cut.png" alt="image-galipette"  class="journee__logo--galipette1"/>
+              </figure>
+              <br>
+          </div>
+
+          <div class="journee__contenu--gauche" id="journee2">
+            <h2>On continue avec ...</h2> <!-- Section fin de matinée -->
               <h3>Des activités dirigées</h3>
-                <p>En groupe en intérieur</p>
+                <p>En groupes en intérieur</p>
                 <ul>
                   <li>pâtisserie</li>
                   <li>peinture</li>
@@ -100,38 +108,51 @@
                 <ul>
                   <li>balade</li>
                   <li>jeux au parc</li>
-                  <li>jeux dans la cours</li>
+                  <li>jeux dans la cour</li>
                 </ul>
-              
+                
                 <h3>Le temps de la sieste</h3>
                   <p>Pour les plus petits et les "lèvent tôt"</p>
-
-              <h2>Après toutes ces activités, c'est le temps du ...</h2>
-
-                <h3>Repas</h3>
-                  <ul>
-                    <li>Un service pour les "petits"</li>
-                    <li>Un service pour les "grands"</li>
-                  </ul>
-                  <p>Afin que les repas se prennent le plus possible dans le calme</p>
                 
-                <h3>Temps des siestes</h3>
-                  <p>Le lever se fait au fur et à mesure des réveils</p>
-
-                <h3>Goûters</h3>
-
-                <h3>Jeux libres</h3>
-
-              <h2>Et en fin de journée c'est l'heure des ...</h2>
-
-                  <h3>Départs échelonnés individualisés</h3>
-                    <p>C'est le deuxième moment privilégié avec les parents pour discuter du déroulé de la journée</p>
-                    <p>Remise du cahier de vie de l'enfant</p>
+                <figure class="journee__logo">
+                  <img src="./images/Roudoudou-cut-back.png" alt="image-roudoudou" class="journee__logo--roudoudou1"/>
+                </figure>
+                <br>
           </div>
-          
+
+          <div class="journee__contenu--droite" id="journee3">
+            <h2>Après toutes ces activités, c'est le temps du ...</h2> <!-- Section milieu de journée -->
+              <h3>Repas</h3>
+                <ul>
+                  <li>Un service pour les "petits"</li>
+                  <li>Un service pour les "grands"</li>
+                </ul>
+                <p>Afin que les repas se prennent le plus possible dans le calme</p>
+                
+              <h3>Temps des siestes</h3>
+                <p>Le lever se fait au fur et à mesure des réveils</p>
+
+              <h3>Goûters</h3>
+
+              <h3>Jeux libres</h3>
+
+              <figure class="journee__logo">
+                <img src="./images/Galipette-cut.png" alt="image-galipette" class="journee__logo--galipette2"/>
+              </figure>
+              <br>
+          </div>
+
+          <div class="journee__contenu--gauche" id="journee4">
+            <h2>Et en fin de journée c'est l'heure des ...</h2> <!-- Section fin de journée -->
+              <h3>Départs échelonnés individualisés</h3>
+                <p>C'est le deuxième moment privilégié avec les parents pour discuter du déroulé de la journée</p>
+                <p>Remise du cahier de vie de l'enfant</p>  
+              <figure class="journee__logo">
+                <img src="./images/Roudoudou-cut-back.png" alt="image-roudoudou" class="journee__logo--roudoudou2"/>
+              </figure>
+            <br>
+          </div>
         </div>
-
-
       </section>
     </main>
 
@@ -143,7 +164,7 @@
             <i class="fas fa-solid fa-envelope logo"></i>
             <p>roudoudougalipette@free.fr</p>
         </a>
-        <a class="lien" href="https://www.google.fr/maps/place/46+Rue+Paul+Faure,+60140+Mogneville/@49.317305,2.468614,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea42c90513:0xf2e2ef612586edc5!8m2!3d49.3173015!4d2.4708027" target="_blank">
+        <a class="lien" href="https://www.google.fr/maps/place/Roudoudou+%26+Galipette/@49.3172556,2.4688581,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea5db20d6d:0x86e5523b2b1f53fb!8m2!3d49.3172521!4d2.4710468" target="_blank">
             <i class="fas fa-map-marker-alt logo"></i>
             <p>46 rue Paul Faure <br>60140 Mogneville</p>
         </a>

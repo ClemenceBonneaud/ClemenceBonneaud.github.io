@@ -2,7 +2,7 @@
 /* -------------------- BANDEAU PRESENTATION -------------------- */
 ////////////////////////////////////////////////////////////////////
 
-.presentation {
+.presentation { /* Bandeau entier */
     height: auto;
     background-color: $color_quaternary;
     margin-top: 0;
@@ -13,7 +13,7 @@
     box-shadow: 0px 0px 15px -5px rgb(158, 158, 158);
 }
 
-.cartes {
+.cartes { /* Bloc contenant l'ensemble des cartes personne */
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -21,7 +21,7 @@
         display: flex;
         flex-direction: column;
     }
-    &__perso {
+    &__perso { /* Cartes personne */
         text-align: center;
         width: 28%;
         padding-bottom: 40px;
@@ -56,21 +56,18 @@
     }
 }
 
-#bienvenue-galipette {
+#bienvenue-galipette { /* Logo Girafe */
     position: absolute;
     width: 100px;
     right: 30px;
     margin-top: -80px;
-    transform: rotate(-40deg);
     @media screen and (max-width: 768px) {
         right: 20px;
         margin-top: -30px;
-        transform: rotate(0deg);
     }
     @media screen and (max-width: 425px) {
         width: 70px;
         right: 30px;
         margin-top: -50px;
-        transform: rotate(20deg);
     }
 }

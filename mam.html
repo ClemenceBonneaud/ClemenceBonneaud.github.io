@@ -7,10 +7,10 @@
     <!-- Fichier CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Google font - Fredoka -->
+    <!-- Google font - Monserrat  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
 
     <!-- FontAwesome -->
     <link
@@ -25,28 +25,29 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico" />
 
     <title>Découvrir la MAM</title>
+
   </head>
 
   <body>
     <!-- Header -->
     <header>
-      <figure>
+      <figure> <!-- Logo R&G -->
         <a href="index.html">
             <img src="images/RetG.png" alt="Logo Roudoudou et Galipette" />
         </a>
       </figure>
-      <nav>
+      <nav> <!-- Menu -->
         <ul class="head_liste">
-          <li class="head_liste__primaire menu-primaire"><a href="index.html">Accueil</a></li>
-          <li class="head_liste__primaire menu-primaire">
+          <li class="head_liste__primaire menu-primaire"><a href="index.html" class="lien-primaire">Accueil</a></li>
+          <li class="head_liste__primaire menu-primaire" id="non-lien-primaire">
             La M.A.M.
-            <ul class="head_liste__secondaire">
+            <ul class="head_liste__secondaire"> <!-- Menu déroulant -->
               <li class="menu-secondaire menu-secondaire--1"><a href="mam.html">Découvrir la MAM</a></li>
               <li class="menu-secondaire menu-secondaire--2"><a href="journee.html">Une journée avec nous</a></li>
               <li class="menu-secondaire menu-secondaire--3"><a href="demarches.html">Inscrire votre enfant</a></li>
               <li class="menu-secondaire menu-secondaire--4"><a href="faq.html">FAQ</a></li>
             </ul>
-          <li class="head_liste__primaire menu-primaire"><a href="contact.html">Contact</a></li>
+          <li class="head_liste__primaire menu-primaire"><a href="contact.html" class="lien-primaire">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -57,39 +58,147 @@
 
         <h1>Découvrez la MAM</h1>
 
-        <div class="bloc">
+        <div class="bloc"> <!-- Section MAM en général -->
           <div class="texte">
             <h2>Qu'est-ce qu'une MAM ?</h2>
               <figure id="mam-r">
                 <img src="./images/Roudoudou-cut-back.png" alt="image roudoudou"/>
               </figure>
-              <p>Dans un même lieu,<strong> 2, 3 ou 4 assistant.e.s maternel.le.s agréé.e.s</strong> se regroupent pour accueillir
-                 <strong>8, 12 ou 16 enfants</strong> simultanément.</p><br>
-              <p>Les parents sont les <strong>employeurs directs</strong> de l'assistant.e maternel.le dit.e <strong>référent.e</strong> de leur 
-                enfant. Les deux parties doivent respecter la <strong>convention collective</strong> du 1er Janvier de l'année en cours</p><br>
-              <p>Les autres assistant.e.s maternel.le.s de la MAM sont dites <strong>délégataires</strong>. Les parents employeurs les autorisent
-                 à s'occuper également de leur enfant ce qui permet de faire des <strong>groupes d'activités</strong> par exemple. <br>La 
-                 délégation peut permettre l'accueil de l'enfant dont l'<strong>ass mat référent.e est absente</strong> (à condition que 
-                 l'ass mat délégataire ne dépasse pas sa capacité d'accueil).</p><br>
-              <p>La MAM est un <strong>lieu d'accueil intermédiaire</strong> entre l'accueil individuel et la collectivité.</p><br>
+
+              <p>Dans un même lieu,<strong> 2, 3 ou 4 assistant.e.s maternel.le.s agréé.e.s</strong> 
+                se regroupent pour accueillir<strong> 8, 12 ou 16 enfants</strong> simultanément.</p><br>
+
+              <p>Les parents sont les <strong>employeurs directs</strong> de l'assistant.e maternel.le 
+                dit.e <strong>référent.e</strong> de leur enfant. Les deux parties doivent respecter la 
+                <strong><a href="https://particulier-employeur.fr/wp-content/uploads/2022/01/2021-12-20_CCN_OS_BD_compressed.pdf" target="_blank">
+                  convention collective</a></strong> du 1er Janvier 2022. Ils déclarent leur assistant.e 
+                  maternel.le sur <a href="https://www.pajemploi.urssaf.fr/pajewebinfo/cms/sites/pajewebinfo/accueil.html" target="_blank">
+                  Pajemploi</a>.</p><br>
+
+              <p>Les autres assistant.e.s maternel.le.s de la MAM sont dites <strong>délégataires</strong>. 
+                Les parents employeurs les autorisent à s'occuper également de leur.s enfant.s ce qui permet de 
+                faire des <strong>groupes d'activités</strong> par exemple. <br>La délégation peut permettre 
+                l'accueil de l'enfant dont l'<strong>ass. mat. référent.e est absent.e</strong> (à condition que 
+                l'ass mat délégataire ne dépasse pas sa capacité d'accueil).</p><br>
+
+              <p>La MAM est un <strong>lieu d'accueil intermédiaire</strong> entre l'accueil individuel et la 
+                collectivité.</p><br>
           </div>
         </div>
 
-        <div class="bloc">
+        <div class="bloc"> <!-- Section MAM R&G -->
           <div class="texte">
-            <h2>Qu'est-ce qui rend Roudoudou et Galipette spécial ?</h2>
+            <h2>Pourquoi choisir Roudoudou et Galipette ?</h2>
               <figure id="mam-g">
                 <img src="./images/Galipette-cut.png" alt="image roudoudou"/>
               </figure>
-              <p>Roudoudou et Galipette accueille les enfants de 0 à 4 ans dans un milieu favorisant le passage en douceur du <strong>cercle
-                familial vers la collectivité</strong>.</p><br>
-              <p>Comme dans tout milieu d'accueil de la petite enfance, l'<strong>éveil et la socialisation</strong> sont des objectifs prioritaires.</p><br>
-              <p>L'association de trois professionnelles agréées de la petite enfance autour d'un <strong>petit groupe d'enfants</strong> permet un accueil
-              <strong>individualisé</strong> à échelle humaine.</p><br>
-              <p>La MAM marie l'avantage d'un.e <strong>assistant.e maternel.le agréé.e indépendant.e</strong> et celui d'un <strong>accueil collectif.</strong></p><br>
+
+              <p>Roudoudou et Galipette accueille les enfants de <strong>0 à 4 ans</strong> dans un milieu favorisant le passage 
+                en douceur du <strong>cercle familial vers la collectivité</strong> dans une maison située à <a href="http://www.mogneville60.com/bienvenue.ws" target="_blank">
+                Mogneville</a> dans l'Oise.</p><br>
+
+              <p>Comme dans tout milieu d'accueil de la petite enfance, l'<strong>éveil et la socialisation</strong> 
+                sont des objectifs prioritaires.</p><br>
+
+              <p>L'association de trois professionnelles agréées de la petite enfance autour d'un <strong>petit 
+                groupe d'enfants</strong> permet un accueil <strong>individualisé</strong> à échelle humaine.</p><br>
+
+              <p>La MAM marie l'avantage d'un.e <strong>assistant.e maternel.le agréé.e indépendant.e</strong> 
+                à celui d'un <strong>accueil collectif.</strong></p><br>
           </div>
         </div>
 
+      </section>
+
+      <section class="carousel" id="mam-carousel" aria-label="Gallery"> <!-- Section carousel -->
+        <ol class="carousel__viewport">
+          
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+              <img alt="image devanture" src="./images/carousel1.jpg" class="carousel__image"> <!-- Photo -->
+            <div class="carousel__snapper">
+              <a href="#carousel__slide5"
+                 class="carousel__prev"><i class="fas fa-solid fa-angle-left previous"></i></a> <!-- Lien & logo précédent (ici retour dernière photo)-->
+              <a href="#carousel__slide2"
+                 class="carousel__next"><i class="fas fa-solid fa-angle-right next"></i></a> <!-- Lien & logo suivant -->
+            </div>
+          </li>
+
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+              <img alt="image entrée" src="./images/carousel2.jpg" class="carousel__image">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1"
+               class="carousel__prev"><i class="fas fa-solid fa-angle-left previous"></i></a>
+            <a href="#carousel__slide3"
+               class="carousel__next"><i class="fas fa-solid fa-angle-right next"></i></a>
+          </li>
+
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+              <img alt="image salle à manger" src="./images/carousel3.jpg" class="carousel__image">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2"
+               class="carousel__prev"><i class="fas fa-solid fa-angle-left previous"></i></a>
+            <a href="#carousel__slide4"
+               class="carousel__next"><i class="fas fa-solid fa-angle-right next"></i></a>
+          </li>
+
+          <li id="carousel__slide4"
+              tabindex="0"
+              class="carousel__slide">
+              <img alt="image salle de jeu" src="./images/carousel4.jpg" class="carousel__image">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3"
+               class="carousel__prev"><i class="fas fa-solid fa-angle-left previous"></i></a>
+            <a href="#carousel__slide5"
+               class="carousel__next"><i class="fas fa-solid fa-angle-right next"></i></a>
+          </li>
+
+          <li id="carousel__slide5"
+              tabindex="0"
+              class="carousel__slide">
+              <img alt="image dortoire" src="./images/carousel5.jpg" class="carousel__image">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide4"
+               class="carousel__prev"><i class="fas fa-solid fa-angle-left previous"></i></a>
+            <a href="#carousel__slide1"
+               class="carousel__next"><i class="fas fa-solid fa-angle-right next"></i></a> <!-- Retour première photo -->
+          </li>
+        </ol>
+
+        <aside class="carousel__navigation"> <!-- Boutons navigation carousel -->
+          <ol class="carousel__navigation-list">
+
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1"
+                 class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2"
+                 class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3"
+                 class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide4"
+                 class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide5"
+                 class="carousel__navigation-button">Go to slide 5</a>
+            </li>
+          </ol>
+        </aside>
       </section>
 
     </main>
@@ -102,7 +211,7 @@
             <i class="fas fa-solid fa-envelope logo"></i>
             <p>roudoudougalipette@free.fr</p>
         </a>
-        <a class="lien" href="https://www.google.fr/maps/place/46+Rue+Paul+Faure,+60140+Mogneville/@49.317305,2.468614,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea42c90513:0xf2e2ef612586edc5!8m2!3d49.3173015!4d2.4708027" target="_blank">
+        <a class="lien" href="https://www.google.fr/maps/place/Roudoudou+%26+Galipette/@49.3172556,2.4688581,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea5db20d6d:0x86e5523b2b1f53fb!8m2!3d49.3172521!4d2.4710468" target="_blank">
             <i class="fas fa-map-marker-alt logo"></i>
             <p>46 rue Paul Faure <br>60140 Mogneville</p>
         </a>

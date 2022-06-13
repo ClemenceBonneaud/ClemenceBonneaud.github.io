@@ -12,11 +12,15 @@
  *
  * LAYOUTS
  * Header.............................. Partie haut de page
+ * Bienvenue........................... Page d'accueil - bandeau bienvenue
+ * Présentation........................ Page d'accueil - section présentation des ass mat
+ * Rejoindre........................... Page d'accueil - section comment inscrire votre enfant
+ * MAM................................. Page découvrir la MAM
+ * Journée............................. Page une journée à la MAM
+ * Démarches........................... Page inscrire votre enfant
+ * FAQ................................. Page FAQ
+ * Contact............................. Page contact
  * Footer.............................. Partie pied de page
- *
- * COMPOSANTS
- * Images ............................. Eléments images
- * Boutons............................. Eléments boutons
 */
 /* -------------------- ANIMATIONS -------------------- */
 /* ---------- Header ---------- */
@@ -83,8 +87,6 @@
     opacity: 1;
   }
 }
-/* ---------- Bandeau bienvenue ---------- */
-/* ---------- Bandeau présentation ---------- */
 /* ---------- Bandeau nous rejoindre ---------- */
 .point:hover {
   transition: all 200ms ease-in-out;
@@ -93,6 +95,49 @@
   box-shadow: 5px 5px 15px -5px #9e9e9e;
 }
 
+/* ---------- Carousel Page MAM ---------- */
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
 /* ---------- Footer ---------- */
 footer a:hover i {
   color: #f4a640;
@@ -104,6 +149,11 @@ footer a:hover p {
 body {
   margin: 0 auto;
   background-color: rgba(244, 166, 64, 0.3);
+}
+
+.bloc {
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px 0px #d8d8d8;
 }
 
 h1,
@@ -119,8 +169,10 @@ li {
 h1 {
   font-size: 2rem;
   margin-top: 0px;
+  margin-bottom: 60px;
   padding-top: 70px;
   font-weight: 500;
+  text-align: center;
 }
 @media screen and (max-width: 1024px) {
   h1 {
@@ -167,16 +219,6 @@ p {
   font-size: 1rem;
 }
 
-.bloc {
-  border-radius: 40px;
-  box-shadow: 5px 5px 10px 0px #d8d8d8;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
 /* -------------------- HEADER -------------------- */
 header {
   display: flex;
@@ -221,12 +263,11 @@ header img {
 }
 .head_liste__primaire {
   width: 150px;
+  height: 71px;
   text-align: center;
   color: #525252;
   text-decoration: none;
   border-top: 2px solid #fcfcfc;
-  padding-top: 25px;
-  padding-bottom: 25px;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -238,6 +279,22 @@ header img {
 .head_liste__primaire a {
   color: #525252;
   text-decoration: none;
+}
+.head_liste .lien-primaire {
+  width: 150px;
+  margin-left: -75px;
+  padding: 25px 0px;
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .head_liste .lien-primaire {
+    width: 33.3%;
+    margin-left: -16.5%;
+  }
+}
+.head_liste #non-lien-primaire {
+  padding-top: 25px;
+  height: 45px;
 }
 .head_liste__secondaire {
   display: none;
@@ -322,6 +379,7 @@ header img {
 }
 
 .fond {
+  /* Image de fond */
   height: inherit;
   width: inherit;
   position: absolute;
@@ -340,6 +398,7 @@ header img {
 
 /* -------------------- BANDEAU PRESENTATION -------------------- */
 .presentation {
+  /* Bandeau entier */
   height: auto;
   background-color: #fcfcfc;
   margin-top: 0;
@@ -351,6 +410,7 @@ header img {
 }
 
 .cartes {
+  /* Bloc contenant l'ensemble des cartes personne */
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -362,6 +422,7 @@ header img {
   }
 }
 .cartes__perso {
+  /* Cartes personne */
   text-align: center;
   width: 28%;
   padding-bottom: 40px;
@@ -400,17 +461,16 @@ header img {
 }
 
 #bienvenue-galipette {
+  /* Logo Girafe */
   position: absolute;
   width: 100px;
   right: 30px;
   margin-top: -80px;
-  transform: rotate(-40deg);
 }
 @media screen and (max-width: 768px) {
   #bienvenue-galipette {
     right: 20px;
     margin-top: -30px;
-    transform: rotate(0deg);
   }
 }
 @media screen and (max-width: 425px) {
@@ -418,12 +478,12 @@ header img {
     width: 70px;
     right: 30px;
     margin-top: -50px;
-    transform: rotate(20deg);
   }
 }
 
 /* -------------------- BANDEAU REJOINDRE -------------------- */
 .rejoindre {
+  /* Section entiere */
   height: auto;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -432,6 +492,7 @@ header img {
 }
 
 #liste-points {
+  /* Contenant cartes */
   display: flex;
   justify-content: space-around;
   width: 80%;
@@ -445,6 +506,7 @@ header img {
 }
 
 .point {
+  /* Cartes infos */
   width: 15%;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -466,6 +528,7 @@ header img {
   }
 }
 .point__txt {
+  /* Texte des cartes */
   font-size: 20px;
   font-weight: 300;
   padding-top: 10px;
@@ -479,6 +542,7 @@ header img {
   }
 }
 .point__num {
+  /* Numéro des cartes */
   width: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -498,6 +562,7 @@ header img {
 }
 
 #bienvenue-roudoudou {
+  /* Logo Crocodile */
   position: absolute;
   width: 100px;
   left: 40px;
@@ -518,164 +583,9 @@ header img {
   }
 }
 
-/* -------------------- FOOTER -------------------- */
-footer {
-  background-color: #fcfcfc;
-  height: auto;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-left: 10%;
-  padding-right: 10%;
-  box-shadow: 0px 0px 15px -10px #9e9e9e;
-}
-@media screen and (max-width: 768px) {
-  footer {
-    flex-direction: column;
-  }
-}
-footer a {
-  text-decoration: none;
-  height: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-footer i {
-  color: #49a253;
-  font-size: 40px;
-  margin-right: 15px;
-}
-footer p {
-  color: #444444;
-}
-
-.fa-facebook-square {
-  font-size: 50px;
-}
-
-/* ----------------------- PAGE DEMARCHES ----------------------- */
-#demarches {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.etape {
-  background-color: #fcfcfc;
-  display: flex;
-  margin-bottom: 40px;
-}
-@media screen and (max-width: 768px) {
-  .etape {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.etape .point__num--demarches {
-  height: 40px;
-  min-width: 50px;
-  margin-right: 30px;
-  margin-left: 30px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-@media screen and (max-width: 768px) {
-  .etape .point__num--demarches {
-    margin-top: 40px;
-  }
-}
-@media screen and (max-width: 425px) {
-  .etape .point__num--demarches {
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 12px;
-    height: 33px;
-  }
-}
-.etape--texte {
-  text-align: left;
-  margin-right: 20px;
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .etape--texte {
-    width: 90%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.etape a {
-  color: #49a253;
-}
-.etape a:hover {
-  color: #f4a640;
-  cursor: pointer;
-}
-.etape figure {
-  width: 20%;
-  max-height: 100%;
-  height: auto;
-  margin: 0;
-}
-@media screen and (max-width: 768px) {
-  .etape figure {
-    display: none;
-  }
-}
-.etape img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0px 40px 40px 0px;
-}
-
-/* ----------------------- PAGE UNE JOURNEE A LA MAM ----------------------- */
-#journee {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-#journee h1 {
-  margin-bottom: 60px;
-}
-#journee__contenu {
-  text-align: left;
-}
-#journee h2 {
-  margin-top: 60px;
-  margin-bottom: -30px;
-  border-left: 8px dotted #49a253;
-  border-top: 8px dotted #49a253;
-  border-radius: 100px 0px 0px 0px;
-}
-#journee h3 {
-  margin-top: 40px;
-}
-#journee p, #journee li {
-  margin-left: 30px;
-}
-#journee :last-child {
-  margin-bottom: 60px;
-}
-#journee figure {
-  display: flex;
-  width: 100%;
-  margin: 0;
-  margin-bottom: -60px;
-}
-#journee img {
-  width: 25%;
-  height: 200px;
-  object-fit: cover;
-}
-
 /* -------------------------------- PAGE MAM ------------------------------- */
 #mam {
+  /* Page complete */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -684,6 +594,7 @@ footer p {
   margin-bottom: 60px;
 }
 #mam .bloc {
+  /* Blocs */
   background-color: #fcfcfc;
   margin-bottom: 60px;
 }
@@ -698,6 +609,7 @@ footer p {
   }
 }
 #mam .texte {
+  /* Contenu texte des blocs */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -722,26 +634,430 @@ footer p {
 #mam img {
   height: 100%;
 }
+#mam a {
+  color: #49a253;
+  text-decoration: none;
+}
+#mam a:hover {
+  color: #f4a640;
+}
 @media screen and (min-width: 426px) and (max-width: 768px) {
   #mam #mam-r {
+    /* Logo roudoudou */
     margin-top: -180px;
   }
   #mam #mam-g {
+    /* Logo galipette */
     margin-top: -230px;
   }
 }
 
+#mam-carousel {
+  /* Carousel */
+  width: 500px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  #mam-carousel {
+    width: 280px;
+    height: 196px;
+  }
+}
+#mam-carousel ol, #mam-carousel li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  filter: drop-shadow(0 0 10px #0003);
+}
+.carousel__viewport {
+  /* Ensemble des éléments de la liste */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.carousel__slide {
+  /* Chaque élément de la liste */
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+}
+.carousel__slide:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -40%, 70px);
+  color: #fff;
+  font-size: 2em;
+}
+.carousel__image {
+  width: 100%;
+  margin: 0;
+}
+.carousel__snapper {
+  /* Liens précédent/suivant */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+.carousel__navigation {
+  /* Ensemble des boutons de navigation */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.carousel__navigation-button {
+  /* Chaque bouton de navigation */
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fbd94f;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+@media screen and (max-width: 768px) {
+  .carousel__navigation-button {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.carousel .previous {
+  /* Lien - prédédent */
+  font-size: 70px;
+  color: #49a253;
+  margin-left: 10px;
+  padding: 10px;
+}
+.carousel .previous:hover {
+  color: #f4a640;
+}
+@media screen and (max-width: 768px) {
+  .carousel .previous {
+    font-size: 50px;
+    padding: 5px;
+  }
+}
+.carousel .next {
+  /* Lien - suivant */
+  font-size: 70px;
+  color: #49a253;
+  padding: 10px;
+}
+.carousel .next:hover {
+  color: #f4a640;
+}
+@media screen and (max-width: 768px) {
+  .carousel .next {
+    font-size: 50px;
+    padding: 5px;
+    margin-left: -15px;
+  }
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 35%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+}
+@media screen and (max-width: 768px) {
+  .carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 30%;
+  }
+}
+
+.carousel::before,
+.carousel__prev {
+  left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: -1rem;
+}
+
+/* ----------------------- PAGE UNE JOURNEE A LA MAM ----------------------- */
+#journee {
+  /* Page complete */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#journee h1 {
+  margin-bottom: 60px;
+}
+#journee__contenu {
+  /* Contenu tout sauf h1 */
+  text-align: left;
+}
+#journee h2 {
+  margin-top: 20px;
+  margin-bottom: -30px;
+  text-align: center;
+}
+#journee h3 {
+  margin-top: 40px;
+}
+#journee p, #journee li {
+  margin-left: 30px;
+}
+#journee :last-child {
+  margin-bottom: 60px;
+}
+#journee .bloc--image {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 350px;
+  margin: 0;
+  margin-bottom: 60px;
+  background-color: #fcfcfc;
+}
+@media screen and (max-width: 768px) {
+  #journee .bloc--image #photo-3 {
+    border-radius: 0px 40px 40px 0px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #journee .bloc--image #photo-3 {
+    display: none;
+  }
+  #journee .bloc--image #photo-2 {
+    border-radius: 0px 40px 40px 0px;
+  }
+}
+#journee .bloc--image img {
+  width: 24.5%;
+  height: 100%;
+  object-fit: cover;
+}
+#journee .bloc--image img:first-child {
+  border-radius: 40px 0px 0px 40px;
+}
+#journee .bloc--image img:last-child {
+  border-radius: 0px 40px 40px 0px;
+}
+@media screen and (max-width: 768px) {
+  #journee .bloc--image img {
+    width: 33%;
+  }
+  #journee .bloc--image img:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  #journee .bloc--image img {
+    width: 50%;
+  }
+}
+
+.journee__contenu--droite {
+  border-top: 8px dotted #49a253;
+  border-right: 8px dotted #49a253;
+  border-radius: 0px 100px 100px 0px;
+  margin-bottom: 80px;
+}
+.journee__contenu--gauche {
+  border-top: 8px dotted #49a253;
+  border-left: 8px dotted #49a253;
+  border-radius: 100px 0px 0px 100px;
+  text-align: right;
+  margin-bottom: 80px;
+  list-style-position: inside;
+}
+.journee__logo img {
+  height: 110px;
+  position: absolute;
+  margin-top: -200px;
+}
+.journee__logo--galipette1 {
+  right: 10%;
+}
+.journee__logo--roudoudou1 {
+  left: 10%;
+}
+.journee__logo--galipette2 {
+  right: 10%;
+}
+.journee__logo--roudoudou2 {
+  left: 10%;
+}
+@media screen and (max-width: 768px) {
+  .journee__logo img {
+    height: 70px;
+    margin-top: 20px;
+  }
+  .journee__logo--galipette1 {
+    right: 30%;
+  }
+  .journee__logo--roudoudou1 {
+    left: 30%;
+  }
+  .journee__logo--galipette2 {
+    right: 30%;
+  }
+  .journee__logo--roudoudou2 {
+    display: none;
+  }
+}
+
+/* ----------------------- PAGE DEMARCHES ----------------------- */
+#demarches {
+  /* Page complète */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.etape {
+  /* Blocs */
+  background-color: #fcfcfc;
+  display: flex;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .etape {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.etape .point__num--demarches {
+  /* Points 1-4 */
+  height: 40px;
+  min-width: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+  .etape .point__num--demarches {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .etape .point__num--demarches {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 12px;
+    height: 33px;
+  }
+}
+.etape--texte {
+  /* Contenu texte des blocs */
+  text-align: left;
+  margin-right: 20px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .etape--texte {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.etape a {
+  color: #49a253;
+  text-decoration: none;
+}
+.etape a:hover {
+  color: #f4a640;
+  cursor: pointer;
+}
+.etape figure {
+  width: 20%;
+  max-height: 100%;
+  height: auto;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .etape figure {
+    display: none;
+  }
+}
+.etape img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px 40px 40px 0px;
+}
+
 /* -------------------------------- PAGE FAQ ------------------------------- */
 #faq {
+  /* Page complete */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 #faq .bloc {
+  /* Blocs */
   background-color: #fcfcfc;
   margin-bottom: 60px;
 }
 #faq .texte {
+  /* Contenu texte des blocs */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -803,6 +1119,51 @@ footer p {
 }
 #contact a:hover {
   color: #f4a640;
+}
+#contact #devis {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#contact #devis ul {
+  list-style-type: none;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  background-color: #fcfcfc;
+  height: auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-shadow: 0px 0px 15px -10px #9e9e9e;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
+footer a {
+  text-decoration: none;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+footer i {
+  color: #49a253;
+  font-size: 40px;
+  margin-right: 15px;
+}
+footer p {
+  color: #444444;
+}
+
+.fa-facebook-square {
+  /* Logo facebook */
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@
 /* -------------------- BANDEAU REJOINDRE -------------------- */
 /////////////////////////////////////////////////////////////////
 
-.rejoindre {
+.rejoindre { /* Section entiere */
     height: auto;
     margin-top:    50px;
     margin-bottom: 100px;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-#liste-points{
+#liste-points { /* Contenant cartes */
     display: flex;
     justify-content: space-around;
     width: 80%;
@@ -21,7 +21,7 @@
     }
 }
 
-.point {
+.point { /* Cartes infos */
     width: 15%;
     margin-top:    15px;
     margin-bottom: 15px;
@@ -37,7 +37,7 @@
         margin-left:  auto;
         margin-right: auto;
     }
-    &__txt {
+    &__txt { /* Texte des cartes */
         font-size: 20px;
         font-weight: 300;
         padding-top:   10px;
@@ -48,7 +48,7 @@
             padding-top: 5px;
         }
     }
-    &__num {
+    &__num { /* Numéro des cartes */
         width: 40px;
         margin-left: auto;
         margin-right: auto;
@@ -66,7 +66,7 @@
     }
 }
 
-#bienvenue-roudoudou {
+#bienvenue-roudoudou { /* Logo Crocodile */
     position: absolute;
     width: 100px;
     left: 40px;

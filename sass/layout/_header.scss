@@ -47,12 +47,11 @@ nav {
     // Liste des onglets/liens principaux
     &__primaire {
         width: 150px;
+        height: 71px;
         text-align: center;
         color: rgb(82, 82, 82);
         text-decoration: none;
         border-top: 2px solid $color_quaternary;
-        padding-top:    25px;
-        padding-bottom: 25px;
         padding-left:    0px;
         padding-right:   0px;
         @media screen and (max-width: 768px) {
@@ -62,6 +61,20 @@ nav {
     &__primaire a{
         color: rgb(82, 82, 82);
         text-decoration: none;
+    }
+    & .lien-primaire {
+        width: 150px;
+        margin-left: -75px;
+        padding: 25px 0px;
+        position: absolute;
+        @media screen and (max-width: 768px) {
+            width: 33.3%;
+            margin-left: -16.5%;
+        }
+    }
+    & #non-lien-primaire {
+        padding-top: 25px;
+        height: 45px;
     }
 
     // Liste des onglets/liens secondaires

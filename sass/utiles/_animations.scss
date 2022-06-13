@@ -14,7 +14,7 @@
         & .head_liste__secondaire {
             display: inline-block;
             position: relative;
-            top: 25px;
+            top:   25px;
             right: 34%;
             padding: 0px;
             @media screen and (max-width: 768px) {
@@ -60,95 +60,6 @@
     }
 }
 
-/* ---------- Bandeau bienvenue ---------- */
-
-// @keyframes tourne {
-//     0% {
-//         transform: rotate(0turn);
-//     }
-//     50% {
-//         transform: rotate(-2turn);
-//     }
-//     100% {
-//         transform: rotate(0turn);
-//     }
-// }
-
-// @keyframes avance {
-//     0% {
-//         transform: translateX(200px);
-//     }
-//     50% {
-//         transform: translateX(-500px);
-//     }
-//     100% {
-//         transform: translateX(0px);
-//     }
-// }
-
-// @keyframes penche {
-//     0% {
-//         transform: rotate(0);
-//     }
-//     25% {
-//         transform: rotate(20deg);
-//     }
-//     50% {
-//         transform: rotate(0);
-//     }
-// }
-
-// @keyframes bouge {
-//     0% {
-//         transform: translateX(-200px);
-//     }
-//     25% {
-//         transform: translateX(-150px);
-//     }
-//     50% {
-//         transform: translateX(-200px);
-//     }
-//     80% {
-//         transform: translateX(0px);
-//         transform: translateY(0px);
-//     }
-//     90% {
-//         transform: translateY(-90px);
-//     }
-//     100% {
-//         transform: translateY(0px);
-//     }
-// }
-    
-// @media screen and (min-width: 769px) {
-
-//         /* Galipette */
-
-//     #bienvenue-galipette-cont {
-//         animation: avance 7000ms both ease-in-out alternate;
-//     }
-    
-//     #bienvenue-galipette {
-//         animation: tourne 7000ms both ease-in-out alternate;
-//     }
-    
-//         /* Roudoudou */
-    
-//     #bienvenue-roudoudou-cont {
-//         animation: bouge 7000ms both ease-in-out alternate;
-//     }
-    
-//     #bienvenue-roudoudou {
-//         animation: penche 7000ms both ease-in-out alternate;
-//         transform-origin: bottom left;
-//     }
-// }
-
-/* ---------- Bandeau présentation ---------- */
-
-// Galipette
-
-
 /* ---------- Bandeau nous rejoindre ---------- */
 
 .point:hover{
@@ -157,6 +68,53 @@
     background-color: transparentize($color: $color_quaternary, $amount: 0.6);
     box-shadow: 5px 5px 15px -5px rgb(158, 158, 158);
 }
+
+/* ---------- Carousel Page MAM ---------- */
+
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
 
 /* ---------- Footer ---------- */
 

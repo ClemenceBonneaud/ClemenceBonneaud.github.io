@@ -22,4 +22,11 @@
             color: $color_tertiary;
         }
     }
+    & #devis {
+        text-align: center;
+        margin-bottom: 60px;
+        & ul {
+            list-style-type: none;
+        }
+    }
 }

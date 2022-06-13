@@ -7,13 +7,11 @@
     <!-- Fichier CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Google font - Fredoka -->
+    <!-- Google font - Monserrat  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" 
-      rel="stylesheet" 
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+
     <!-- FontAwesome -->
     <link
       rel="stylesheet"
@@ -27,28 +25,29 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico" />
 
     <title>Inscrire votre enfant chez R&G</title>
+
   </head>
 
   <body>
     <!-- Header -->
     <header>
-      <figure>
+      <figure> <!-- Logo R&G -->
         <a href="index.html">
             <img src="images/RetG.png" alt="Logo Roudoudou et Galipette" />
         </a>
       </figure>
-      <nav>
+      <nav> <!-- Menu -->
         <ul class="head_liste">
-          <li class="head_liste__primaire menu-primaire"><a href="index.html">Accueil</a></li>
-          <li class="head_liste__primaire menu-primaire">
+          <li class="head_liste__primaire menu-primaire"><a href="index.html" class="lien-primaire">Accueil</a></li>
+          <li class="head_liste__primaire menu-primaire" id="non-lien-primaire">
             La M.A.M.
-            <ul class="head_liste__secondaire">
+            <ul class="head_liste__secondaire"> <!-- Menu déroulant -->
               <li class="menu-secondaire menu-secondaire--1"><a href="mam.html">Découvrir la MAM</a></li>
               <li class="menu-secondaire menu-secondaire--2"><a href="journee.html">Une journée avec nous</a></li>
               <li class="menu-secondaire menu-secondaire--3"><a href="demarches.html">Inscrire votre enfant</a></li>
               <li class="menu-secondaire menu-secondaire--4"><a href="faq.html">FAQ</a></li>
             </ul>
-          <li class="head_liste__primaire menu-primaire"><a href="contact.html">Contact</a></li>
+          <li class="head_liste__primaire menu-primaire"><a href="contact.html" class="lien-primaire">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -59,57 +58,67 @@
 
         <h1>Comment inscrire votre enfant ?</h1>
 
-        <div class="etape bloc">
+        <div class="etape bloc"> <!-- Section Prendre contact -->
           <p class="point__num point__num--demarches">1</p>
           <div class="etape--texte">
             <h2>Prendre contact</h2>
-            <p>Retrouvez-nous sur <a href="https://www.facebook.com/Mamroudoudougalipette" target="_blank">facebook</a> sous le 
-              nom <strong>MAM Roudoudou & Galipette Maison d'Assisstantes Maternelles dans l'Oise</strong>, envoyez-nous un message privé</p> <br>
-            <p>Envoyez-nous un <a href="mailto:roudoudougalipette@free.fr">email</a> à l'adresse 
-              <strong>roudoudougalipette@free.fr</strong></p><br>
-            <p>Passez-nous un coup de <span class="lien-contact">téléphone</span> au <strong>09.83.50.42.48</strong> aux horaires où nous sommes
-             sur place pour pouvoir vous répondre. Attention: ne laissez pas de message sur la boîte vocale, nous ne les recevrons pas !</p><br>
-            <p>Vous pouvez également nous trouver sur <a href="https://www.nounou-top.fr" target="_blank">Nounou Top</a> sous le nom <strong>MAM Roudoudou et Galipette</strong> 
-              après vous être inscrit sur le site</p> <br>
+              <p>Retrouvez-nous sur <a href="https://www.facebook.com/Mamroudoudougalipette" target="_blank">
+                facebook</a> sous le nom <strong>MAM Roudoudou & Galipette Maison d'Assistantes Maternelles 
+                dans l'Oise</strong>, envoyez-nous un message privé.</p> <br>
+              
+              <p>Envoyez-nous un <a href="mailto:roudoudougalipette@free.fr">email</a> à l'adresse 
+                <strong>roudoudougalipette@free.fr.</strong></p><br>
+              
+              <p>Téléphonez-nous au <strong>09.83.50.42.48
+                </strong> aux horaires où nous sommes sur place pour pouvoir vous répondre. Attention: ne laissez 
+                pas de message sur la boîte vocale, nous ne les recevrons pas !</p><br>
+              
+              <p>Vous pouvez également nous trouver sur <a href="https://www.nounou-top.fr" target="_blank">Nounou 
+                Top</a> sous le nom <strong>MAM Roudoudou et Galipette</strong> après vous être inscrit sur le site.</p><br>
           </div>
           <figure>
-            <img alt="image-enfant" src="images/1653395531074.jpg" />
+            <img alt="image-enfant" src="images/demarches1.jpg" />
           </figure>
         </div>
 
-        <div class="etape bloc">
+        <div class="etape bloc" id="visite"> <!-- Section Visiter la MAM-->
           <p class="point__num point__num--demarches">2</p>
           <div class="etape--texte">
             <h2>Visiter la MAM</h2>
-            <p>Venez visiter la MAM <strong>sur rendez-vous</strong> en dehors des heures d'accueil</p><br>
+              <p>Venez visiter la MAM <strong>sur rendez-vous</strong> en dehors des heures d'accueil.</p><br>
+              <p>Si vous voulez en savoir plus dès maintenant, allez jeter un coup d'oeil sur la page 
+                <a href="mam.html">découvrir la MAM</a>.</p><br>
           </div>
           <figure>
-            <img src="images/1653395531081.jpg" alt="image-enfant" />
+            <img src="images/demarches2.jpg" alt="image-enfant" />
           </figure>
         </div>
 
-        <div class="etape bloc">
+        <div class="etape bloc" id="engagement"> <!-- Section Engagement réciproque -->
           <p class="point__num point__num--demarches">3</p>
           <div class="etape--texte">
             <h2>Signature de l'engagement réciproque</h2>
-            <p>La signature de l'engagement réciproque définit les <strong>modalités d'accueil</strong> en nombre d'heures par jour, en 
-              nombre de jours par semaine, en nombre de semaines par an ainsi que la mensualisation. </p> <br>
-            <p>Un chèque du montant d'un demi-mois brut est demandé au moment de la signature</p> <br>
+              <p>La signature de l'engagement réciproque définit les <strong>modalités d'accueil</strong> 
+                en nombre d'heures par jour, en nombre de jours par semaine, en nombre de semaines par 
+                an ainsi que la mensualisation. </p> <br>
+
+              <p>Un chèque du montant d'un demi-mois brut est demandé au moment de la signature.</p> <br>
           </div>
           <figure>
-            <img alt="image-enfant" src="images/1653395531096.jpg" />
+            <img alt="image-enfant" src="images/demarches3.jpg" />
           </figure>
         </div>
 
-        <div class="etape bloc">
+        <div class="etape bloc" id="contrat"> <!-- Section Contrat -->
           <p class="point__num point__num--demarches">4</p>
           <div class="etape--texte">
             <h2>Signature du contrat</h2>
-            <p>Les <strong>parents employeurs</strong> et l'<strong>assistante maternelle</strong> signent un contrat à durée indéterminée 
-              avant le premier jour d'accueil de l'enfant (avant la période d'adaptation)</p><br>
+            <p>Les <strong>parents employeurs</strong> et l'<strong>assistante maternelle</strong> signent 
+              un contrat à durée indéterminée avant le premier jour d'accueil de l'enfant (avant la période 
+              d'adaptation).</p><br>
           </div>
           <figure>
-            <img alt="image-enfant" src="images/1653395531131.jpg" />
+            <img alt="image-enfant" src="images/demarches4.jpg" />
           </figure>
         </div>
 
@@ -124,7 +133,7 @@
             <i class="fas fa-solid fa-envelope logo"></i>
             <p>roudoudougalipette@free.fr</p>
         </a>
-        <a class="lien" href="https://www.google.fr/maps/place/46+Rue+Paul+Faure,+60140+Mogneville/@49.317305,2.468614,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea42c90513:0xf2e2ef612586edc5!8m2!3d49.3173015!4d2.4708027" target="_blank">
+        <a class="lien" href="https://www.google.fr/maps/place/Roudoudou+%26+Galipette/@49.3172556,2.4688581,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea5db20d6d:0x86e5523b2b1f53fb!8m2!3d49.3172521!4d2.4710468" target="_blank">
             <i class="fas fa-map-marker-alt logo"></i>
             <p>46 rue Paul Faure <br>60140 Mogneville</p>
         </a>

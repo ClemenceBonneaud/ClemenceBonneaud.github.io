@@ -7,12 +7,12 @@
     "sass": "sass --watch ./sass/main.scss:style.css"
   },
   "keywords": [
-    "M.A.M.",
+    "MAM",
     "maison d'assistantes maternelle",
     "assistante maternelle mogneville",
     "garde d'enfant",
-    "nourisse",
-    "nounou"
+    "nounou",
+    "mogneville"
   ],
   "author": "Clémence Bonneaud",
   "license": "ISC"

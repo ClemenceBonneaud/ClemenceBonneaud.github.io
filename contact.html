@@ -7,10 +7,10 @@
     <!-- Fichier CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Google font - Fredoka -->
+    <!-- Google font - Monserrat  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
 
     <!-- FontAwesome -->
     <link
@@ -25,28 +25,30 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico" />
 
     <title>Contacts</title>
+
   </head>
 
   <body>
+
     <!-- Header -->
     <header>
-      <figure>
+      <figure> <!-- Logo R&G -->
         <a href="index.html">
             <img src="images/RetG.png" alt="Logo Roudoudou et Galipette" />
         </a>
       </figure>
-      <nav>
+      <nav> <!-- Menu -->
         <ul class="head_liste">
-          <li class="head_liste__primaire menu-primaire"><a href="index.html">Accueil</a></li>
-          <li class="head_liste__primaire menu-primaire">
+          <li class="head_liste__primaire menu-primaire"><a href="index.html" class="lien-primaire">Accueil</a></li>
+          <li class="head_liste__primaire menu-primaire" id="non-lien-primaire">
             La M.A.M.
-            <ul class="head_liste__secondaire">
+            <ul class="head_liste__secondaire"> <!-- Menu déroulant -->
               <li class="menu-secondaire menu-secondaire--1"><a href="mam.html">Découvrir la MAM</a></li>
               <li class="menu-secondaire menu-secondaire--2"><a href="journee.html">Une journée avec nous</a></li>
               <li class="menu-secondaire menu-secondaire--3"><a href="demarches.html">Inscrire votre enfant</a></li>
               <li class="menu-secondaire menu-secondaire--4"><a href="faq.html">FAQ</a></li>
             </ul>
-          <li class="head_liste__primaire menu-primaire"><a href="contact.html">Contact</a></li>
+          <li class="head_liste__primaire menu-primaire"><a href="contact.html" class="lien-primaire">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -57,24 +59,38 @@
 
         <h1>Nous contacter</h1>
 
-        <div class="bloc">
+        <div class="bloc"> <!-- Section Facebook / Mail -->
           <h2>Vous pouvez nous joindre en priorité via :</h2>
             <p><a href="https://www.facebook.com/Mamroudoudougalipette" target="_blank">Facebook</a> sous le 
-              nom <strong>MAM Roudoudou & Galipette Maison d'Assisstantes Maternelles dans l'Oise</strong>, envoyez-nous un message privé</p> <br>
-            <p><a href="mailto:roudoudougalipette@free.fr">Email</a> à l'adresse <strong>roudoudougalipette@free.fr</strong></p><br>
+              nom <strong>MAM Roudoudou & Galipette Maison d'Assistantes Maternelles dans l'Oise</strong>, 
+              envoyez-nous un message privé</p> <br>
+            <p><a href="mailto:roudoudougalipette@free.fr">Email</a> à l'adresse 
+              <strong>roudoudougalipette@free.fr</strong></p><br>
         </div>
         
-        <div class="bloc">
+        <div class="bloc"> <!-- Section téléphone -->
           <h2>Pour nous avoir directement :</h2>
-            <p>Par téléphone au <strong>09.83.50.42.48</strong> aux horaires où nous sommes sur place pour pouvoir vous répondre. <br>
+            <p>Par téléphone au <strong>09.83.50.42.48</strong> aux horaires où nous sommes sur place pour pouvoir 
+              vous répondre. <br>
               Attention: <strong>ne laissez pas de message sur la boîte vocale</strong>, nous ne les recevrons pas !</p><br>
         </div>
 
-        <div class="bloc">
+        <div class="bloc"> <!-- Section Nounou top -->
               <h2>Vous nous retrouverez aussi sur :</h2>
-            <p><a href="https://www.nounou-top.fr" target="_blank">Nounou Top</a> sous le nom <strong>MAM Roudoudou et Galipette</strong> 
-              après vous être inscrit sur le site</p> <br>
+            <p><a href="https://www.nounou-top.fr" target="_blank">Nounou Top</a> sous le nom <strong>MAM Roudoudou 
+              et Galipette</strong> après vous être inscrit sur le site</p><br>
         </div>
+
+        <div id="devis"> <!-- Section devis -->
+          <h3>Infos à donner afin de pouvoir réaliser une estimation de la mensualisation :</h3>
+            <ul>
+              <li>Date de début de garde</li>
+              <li>Âge de l'enfant</li>
+              <li>Horaires</li>
+              <li>Nombre de jours/semaine</li>
+              <li>Nombre de semaines/an</li>
+            </ul>
+    </div>
 
       </section>
 
@@ -88,7 +104,7 @@
             <i class="fas fa-solid fa-envelope logo"></i>
             <p>roudoudougalipette@free.fr</p>
         </a>
-        <a class="lien" href="https://www.google.fr/maps/place/46+Rue+Paul+Faure,+60140+Mogneville/@49.317305,2.468614,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea42c90513:0xf2e2ef612586edc5!8m2!3d49.3173015!4d2.4708027" target="_blank">
+        <a class="lien" href="https://www.google.fr/maps/place/Roudoudou+%26+Galipette/@49.3172556,2.4688581,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea5db20d6d:0x86e5523b2b1f53fb!8m2!3d49.3172521!4d2.4710468" target="_blank">
             <i class="fas fa-map-marker-alt logo"></i>
             <p>46 rue Paul Faure <br>60140 Mogneville</p>
         </a>
