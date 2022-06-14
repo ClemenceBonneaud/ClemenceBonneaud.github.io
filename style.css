@@ -63,21 +63,51 @@
 
 .menu-secondaire {
   animation: menu 500ms both;
+  -webkit-animation: menu 500ms both;
+  -moz-animation: menu 500ms both;
 }
 .menu-secondaire--1 {
   animation-delay: 100ms;
+  -webkit-animation-delay: 100ms;
+  -moz-animation-delay: 100ms;
 }
 .menu-secondaire--2 {
   animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+  -moz-animation-delay: 200ms;
 }
 .menu-secondaire--3 {
   animation-delay: 300ms;
+  -webkit-animation-delay: 300ms;
+  -moz-animation-delay: 300ms;
 }
 .menu-secondaire--4 {
   animation-delay: 400ms;
+  -webkit-animation-delay: 400ms;
+  -moz-animation-delay: 400ms;
 }
 
 @keyframes menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes menu {
   0% {
     transform: translateY(10px);
     opacity: 0;
