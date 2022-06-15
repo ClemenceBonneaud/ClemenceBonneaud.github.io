@@ -62,9 +62,35 @@
 }
 
 .menu-secondaire {
-  animation: menu 500ms both;
-  -webkit-animation: menu 500ms both;
-  -moz-animation: menu 500ms both;
+  animation-name: menu;
+  -webkit-animation-name: menu;
+  -moz-animation-name: menu;
+  animation-duration: 500ms;
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+}
+.menu-secondaire--1 {
+  animation-delay: 100ms;
+  -webkit-animation-delay: 100ms;
+  -moz-animation-delay: 100ms;
+}
+.menu-secondaire--2 {
+  animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+  -moz-animation-delay: 200ms;
+}
+.menu-secondaire--3 {
+  animation-delay: 300ms;
+  -webkit-animation-delay: 300ms;
+  -moz-animation-delay: 300ms;
+}
+.menu-secondaire--4 {
+  animation-delay: 400ms;
+  -webkit-animation-delay: 400ms;
+  -moz-animation-delay: 400ms;
 }
 
 @keyframes menu {
