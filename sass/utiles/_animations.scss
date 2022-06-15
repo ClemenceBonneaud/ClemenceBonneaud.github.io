@@ -48,7 +48,7 @@
     animation-duration:         500ms;
     -webkit-animation-duration: 500ms;
     -moz-animation-duration:    500ms;
-    
+
     animation-fill-mode:         both;
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode:    both;
@@ -63,15 +63,33 @@
 
 @keyframes menu {
     0% {
-        transform:         translateY(10px);
-        -webkit-transform: translateY(10px);
-        -moz-transform:    translateY(10px);
+        transform:         translate3d(0,10px,0);
         opacity: 0;
     }
     100% {
-        transform:         translateY(0px);
-        -webkit-transform: translateY(0px);
-        -moz-transform:    translateY(0px);
+        transform:         translate3d(0,10px,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes menu {
+    0% {
+        -webkit-transform: translate3d(0,10px,0);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate3d(0,10px,0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes menu {
+    0% {
+        -moz-transform:    translate3d(0,10px,0);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform:    translate3d(0,10px,0);
         opacity: 1;
     }
 }
