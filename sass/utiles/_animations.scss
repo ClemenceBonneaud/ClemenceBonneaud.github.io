@@ -44,13 +44,13 @@
     animation:         menu 500ms both;
     -webkit-animation: menu 500ms both;
     -moz-animation:    menu 500ms both;
-    @for $i from 1 through 4 {
-        &--#{$i} {
-            animation-delay:         100ms * $i;
-            -webkit-animation-delay: 100ms * $i;
-            -moz-animation-delay:    100ms * $i;
-        }
-    }
+    // @for $i from 1 through 4 {
+    //     &--#{$i} {
+    //         animation-delay:         100ms * $i;
+    //         -webkit-animation-delay: 100ms * $i;
+    //         -moz-animation-delay:    100ms * $i;
+    //     }
+    // }
 }
 
 @keyframes menu {
