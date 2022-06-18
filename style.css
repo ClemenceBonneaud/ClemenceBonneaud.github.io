@@ -208,7 +208,8 @@ header img {
   display: flex;
   justify-content: end;
   list-style: none;
-  margin-top: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-right: 2px;
 }
 @media screen and (max-width: 768px) {
@@ -249,14 +250,11 @@ header img {
     margin-left: -16.5%;
   }
 }
-.head_liste #non-lien-primaire {
-  padding-top: 25px;
-  height: 45px;
-}
 .head_liste__secondaire {
   display: none;
   text-align: right;
   z-index: 10;
+  margin-top: -25px;
 }
 @media screen and (max-width: 768px) {
   .head_liste__secondaire {
@@ -270,6 +268,13 @@ header img {
 }
 .head_liste__secondaire a {
   display: inline-block;
+}
+
+#menu-primaire__bouton {
+  height: 100%;
+  width: 100%;
+  background-color: #fcfcfc;
+  border: none;
 }
 
 .menu-secondaire {
