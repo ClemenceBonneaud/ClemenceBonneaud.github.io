@@ -4,7 +4,8 @@ h3,
 h4,
 p,
 a,
-li {
+li,
+button {
     font-family: 'Fredoka', sans-serif;
 }
 
@@ -52,4 +53,10 @@ h3 {
 p {
     color: black;
     font-size: 1rem;
+}
+
+button {
+    color: rgb(82, 82, 82);
+    font-size: 0.9rem;
+    font-weight: 400;
 }

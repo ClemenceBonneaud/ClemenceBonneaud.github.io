@@ -27,12 +27,12 @@
 .menu-primaire {
   transition: all 500ms;
 }
-.menu-primaire:hover, .menu-primaire:active {
+.menu-primaire:hover {
   color: black;
   border-top: 2px solid #49a253;
   cursor: pointer;
 }
-.menu-primaire:hover .head_liste__secondaire, .menu-primaire:active .head_liste__secondaire {
+.menu-primaire:hover .head_liste__secondaire {
   display: inline-block;
   position: relative;
   top: 25px;
@@ -40,12 +40,37 @@
   padding: 0px;
 }
 @media screen and (max-width: 768px) {
-  .menu-primaire:hover .head_liste__secondaire, .menu-primaire:active .head_liste__secondaire {
+  .menu-primaire:hover .head_liste__secondaire {
     right: 0;
   }
 }
 @media screen and (max-width: 425px) {
-  .menu-primaire:hover .head_liste__secondaire, .menu-primaire:active .head_liste__secondaire {
+  .menu-primaire:hover .head_liste__secondaire {
+    position: absolute;
+    top: 70px;
+  }
+}
+
+.open {
+  transition: all 500ms;
+  color: black;
+  border-top: 2px solid #49a253;
+  cursor: pointer;
+}
+.open .head_liste__secondaire {
+  display: inline-block;
+  position: relative;
+  top: 25px;
+  right: 34%;
+  padding: 0px;
+}
+@media screen and (max-width: 768px) {
+  .open .head_liste__secondaire {
+    right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .open .head_liste__secondaire {
     position: absolute;
     top: 70px;
   }
@@ -119,7 +144,8 @@ h3,
 h4,
 p,
 a,
-li {
+li,
+button {
   font-family: "Fredoka", sans-serif;
 }
 
@@ -174,6 +200,12 @@ h3 {
 p {
   color: black;
   font-size: 1rem;
+}
+
+button {
+  color: #525252;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 /* -------------------- HEADER -------------------- */
@@ -264,6 +296,7 @@ header img {
 @media screen and (max-width: 425px) {
   .head_liste__secondaire {
     width: 100%;
+    margin-top: 0;
   }
 }
 .head_liste__secondaire a {
