@@ -41,56 +41,22 @@
 // Menu déroulant 
 
 .menu-secondaire{
-    animation-name:         menu;
-    -webkit-animation-name: menu;
-    -moz-animation-name:    menu;
-
-    animation-duration:         500ms;
-    -webkit-animation-duration: 500ms;
-    -moz-animation-duration:    500ms;
-
-    animation-fill-mode:         both;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode:    both;
+    animation: menu 500ms both;
     @for $i from 1 through 4 {
         &--#{$i} {
-            animation-delay:         100ms * $i;
-            -webkit-animation-delay: 100ms * $i;
-            -moz-animation-delay:    100ms * $i;
+            animation-delay: 100ms * $i;
         }
     }
 }
 
 @keyframes menu {
     0% {
-        transform:         translate3d(0,10px,0);
         opacity: 0;
+        transform: translateY(10px);
     }
     100% {
-        transform:         translate3d(0,10px,0);
         opacity: 1;
-    }
-}
-
-@-webkit-keyframes menu {
-    0% {
-        -webkit-transform: translate3d(0,10px,0);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translate3d(0,10px,0);
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes menu {
-    0% {
-        -moz-transform:    translate3d(0,10px,0);
-        opacity: 0;
-    }
-    100% {
-        -moz-transform:    translate3d(0,10px,0);
-        opacity: 1;
+        transform: translateY(0px);
     }
 }
 
