@@ -7,22 +7,45 @@
 // Survol des éléments du nav
 .menu-primaire {
     transition: all 500ms;
-    &:hover {
-        color: black;
-        border-top: 2px solid $color_secondary;
-        cursor: pointer;
-        & .head_liste__secondaire {
-            display: inline-block;
-            position: relative;
-            top:   25px;
-            right: 34%;
-            padding: 0px;
-            @media screen and (max-width: 768px) {
-                right: 0;
+    @media screen and (min-width: 769px) {
+        &:hover {
+            color: black;
+            border-top: 2px solid $color_secondary;
+            cursor: pointer;
+            & .head_liste__secondaire {
+                display: inline-block;
+                position: relative;
+                top:   25px;
+                right: 34%;
+                padding: 0px;
+                @media screen and (max-width: 768px) {
+                    right: 0;
+                }
+                @media screen and (max-width: 425px) {
+                    position: absolute;
+                    top: 70px;
+                }
             }
-            @media screen and (max-width: 425px) {
-                position: absolute;
-                top: 70px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &:focus {
+            color: black;
+            border-top: 2px solid $color_secondary;
+            cursor: pointer;
+            & .head_liste__secondaire {
+                display: inline-block;
+                position: relative;
+                top:   25px;
+                right: 34%;
+                padding: 0px;
+                @media screen and (max-width: 768px) {
+                    right: 0;
+                }
+                @media screen and (max-width: 425px) {
+                    position: absolute;
+                    top: 70px;
+                }
             }
         }
     }
