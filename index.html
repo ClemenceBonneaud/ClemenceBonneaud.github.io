@@ -1,150 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width = device-width, initial-scale=1 " />
+    <link rel="icon" href="/favicon.ico" />
 
-    <!-- Fichier CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@latest/animate.min.css" />
 
-    <!-- Google font - Fredoka -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-
-    <title>Roudoudou et Galipette</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clémence Bonneaud</title>
   </head>
-
   <body>
-    <!-- Header -->
-    <header>
-      <figure>
-        <a href="index.html">
-            <img src="images/RetG.png" alt="Logo Roudoudou et Galipette" />
-        </a>
-      </figure>
-      <nav>
-        <ul class="head_liste">
-          <li class="head_liste__primaire menu-primaire"><a href="index.html">Accueil</a></li>
-          <li class="head_liste__primaire menu-primaire">
-            La M.A.M.
-            <ul class="head_liste__secondaire">
-              <li class="menu-secondaire menu-secondaire--1"><a href="mam.html">Découvrir la MAM</a></li>
-              <li class="menu-secondaire menu-secondaire--2"><a href="journee.html">Une journée avec nous</a></li>
-              <li class="menu-secondaire menu-secondaire--3"><a href="demarches.html">Les démarches</a></li>
-            </ul>
-          </li>
-          <li class="head_liste__primaire menu-primaire">
-            Contact
-            <ul class="head_liste__secondaire">
-              <li class="menu-secondaire menu-secondaire--1"><a href="contact.html">Contact</a></li>
-              <li class="menu-secondaire menu-secondaire--2"><a href="faq.html">FAQ</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="bienvenue">
-        <h1>Bienvenue chez Roudoudou et Galipette !</h1>
-        <p>
-          La MAM où l'on s'<strong>éveille</strong> et grandit <strong>ensemble</strong> tout en s'<strong>amusant</strong>
-        </p>
-        <div class="bienvenue__mascottes">
-          <figure id="bienvenue-roudoudou-cont">
-            <img
-              id="bienvenue-roudoudou"
-              src="images/Roudoudou-cut-back.png"
-              alt="image de roudoudou le crocodile"
-            />
-          </figure>
-          <figure id="bienvenue-galipette-cont">
-            <img
-              id="bienvenue-galipette"
-              src="images/Galipette-cut.png"
-              alt="image de galipette la girafe"
-            />
-          </figure>
-        </div>
-      </section>
-      <section class="presentation">
-        <h2>Nous sommes trois <strong>Assistantes Maternelles Agrées</strong> réunies
-            pour accueillir vos enfants de <strong>0 à 4 ans</strong> dans un lieu
-            qui leur est <strong>entièrement dédié</strong>
-        </h2>
-        <div class="cartes">
-            <div class="cartes__perso">
-                <figure>
-                    <img src="images/agnes.jpg" alt="photo d'Agnès Bonneaud">
-                </figure>
-                <h3>Agnès Bonneaud</h3>
-                <p>Assistante maternelle agréée depuis <strong>2003</strong>, 
-                    je suis <strong>co-fondatrice</strong> de la MAM et j'ai de l'<strong>énergie à revendre</strong>.</p>
-            </div>
-            <div class="cartes__perso">
-                <figure>
-                    <img src="images/stephanie.jpg" alt="photo de Stéphanie Michel">
-                </figure>
-                <h3>Stéphanie Michel</h3>
-                <p>Assistante maternelle agréée depuis <strong>2004</strong>, 
-                    je suis <strong>co-fondatrice</strong> de la MAM et j'ai des 
-                    <strong>idées plein la tête</strong>.</p>
-            </div>
-            <div class="cartes__perso">
-                <figure>
-                    <img src="images/valerie.jpg" alt="photo de Valérie Bourdon">
-                </figure>
-                <h3>Valérie Bourdon</h3>
-                <p>Assistante maternelle agréée depuis <strong>2005</strong>, 
-                    avant j'étais <strong>institutrice</strong> en école maternelle.
-                    J'ai rejoint la MAM en <strong>2020</strong>.</p>
-            </div>
-        </div>
-      </section>
-      <section class="rejoindre">
-          <h2>Vous souhaitez <strong>faire garder vos enfants</strong> chez Roudoudou et Galipette ?</h2>
-        <div id="liste-points">
-            <a class="point point--left" href="contact.html">
-                <p class="point__num">1</p>
-                <p class="point__txt">Prendre contact</p>
-            </a>
-            <a class="point point--right" href="mam.html">
-                <p class="point__num">2</p>
-                <p class="point__txt">Visiter la MAM</p>
-            </a>
-            <a class="point point--left" href="demarches.html">
-                <p class="point__num">3</p>
-                <p class="point__txt">Signer un engagement réciproque</p>
-            </a>
-            <a class="point point--right" href="demarches.html">
-                <p class="point__num">4</p>
-                <p class="point__txt">Signer un contrat d'embauche</p>
-            </a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-        <a class="lien" href="https://www.facebook.com/Mamroudoudougalipette" target="_blank">
-            <i class="fab fa-brands fa-facebook-square logo"></i>
-        </a>
-        <a class="lien" href="mailto:roudoudougalipette@free.fr">
-            <i class="fas fa-solid fa-envelope logo"></i>
-            <p>roudoudougalipette@free.fr</p>
-        </a>
-        <a class="lien" href="https://www.google.fr/maps/place/46+Rue+Paul+Faure,+60140+Mogneville/@49.317305,2.468614,17z/data=!3m1!4b1!4m5!3m4!1s0x47e64aea42c90513:0xf2e2ef612586edc5!8m2!3d49.3173015!4d2.4708027" target="_blank">
-            <i class="fas fa-map-marker-alt logo"></i>
-            <p>46 rue Paul Faure <br>60140 Mogneville</p>
-        </a>
-  </footer>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
